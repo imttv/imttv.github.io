@@ -1,0 +1,76 @@
+body {background: #151515;}
+
+a, a:hover, a:visited {text-decoration: none;}
+#hovedkontainer {
+    position: absolute;
+    top: 20%;
+    left: 0;
+    right:0;
+    min-height: 750px;
+}
+#rekke {}
+.fotnote,.visittkort,.kort{background: #293033;}
+.fotnote {
+    height: 60px;
+    margin-top: 20px;
+    animation-name: skyvned;
+    animation-duration: 1s;
+    animation-timing-function: ease;
+}
+.sentrering {display: flex;justify-content: center;}
+.visittkort:hover{background: #404c51;}
+.visittkort {
+    color: #fff;
+    height: 100px;
+    width: 100%;
+    padding: 50px 0 0 0;
+    font-size: 50px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    border-top: 30px solid #404c51;
+    border-bottom: 30px solid #404c51;
+}
+.kort:hover{background: #404c51;}
+.kort img {
+    display: block;
+    float:right;
+    height: 100px;
+    width: 100px;
+}
+.kort h1 {
+    font-size: 24px;
+    display:block;
+    float:left;
+    margin-top: 70px;
+}
+.kort p {
+    display:block;
+    float:left;
+    font-size: 18px;
+    line-height: 26px;
+}
+.kort {
+    float: left;
+    color: #fff;
+    padding: 30px;
+    height: 650px;
+    width: 300px;
+    margin-right: 20px;
+    margin-top: 20px;
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+    animation-name: skyvinn;
+    animation-duration: 1s;
+    animation-timing-function: ease;
+    border: 1px solid #ccc;
+    word-wrap: normal;
+    overflow: hidden;
+}
+@keyframes skyvned {
+    0%   {margin-top:100px;}
+    100% {margin-top:20px;}
+}
+@keyframes skyvinn {
+    0%   {margin-left:100px;}
+    100% {margin-left:0px;}
+}
