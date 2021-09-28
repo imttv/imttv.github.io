@@ -3,8 +3,6 @@
 <head>
     <meta charset="UTF-8" />
     <title>Visittkort</title>
-    
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <style>
 body {background: #151515;}
 
@@ -108,7 +106,7 @@ a, a:hover, a:visited {text-decoration: none; color: #fff;}
         }
 
         ul li a:hover {
-            color: #000000;
+            color: #bbfcff;
             transition: 0.25s;
         }
 
@@ -121,11 +119,6 @@ a, a:hover, a:visited {text-decoration: none; color: #fff;}
     </style>
     </head>
 <body>
-<script>
-    function knapp(divId) {
-        $("#" + divId).toggle();
-    }
-</script>
 
 <section class="navbar">
     <ul>
@@ -136,13 +129,12 @@ a, a:hover, a:visited {text-decoration: none; color: #fff;}
 </section>
 
 <div id="hovedkontainer">
-    <a href="#" onclick="knapp('rekke');">
         <div class="visittkort">
             Visittkort for gruppe 9B
         </div>
     </a>
 
-    <div id="rekke" style="display:none;">
+    <div id="rekke">
         <div class="sentrering">
             <div class="kort">
                 <h1>Jostein</h1>
@@ -170,6 +162,23 @@ a, a:hover, a:visited {text-decoration: none; color: #fff;}
         </div>
     </div>
 </div>
+
+<script>
+    var visittkort=document.getElementById("visittkort");
+    var rekke=document.getElementById("rekke");
+
+    n=0;
+    rekke.hidden=true;
+
+    visittkort.onclick=function (){
+        n++;
+        if (n==2){
+            n=0;
+            rekke.hidden=false;
+        }
+    };
+
+</script>
 
 </body>
 </html>
