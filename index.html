@@ -129,10 +129,9 @@ a, a:hover, a:visited {text-decoration: none; color: #fff;}
 </section>
 
 <div id="hovedkontainer">
-        <div class="visittkort">
+        <div class="visittkort" id="visittkort">
             Visittkort for gruppe 9B
         </div>
-    </a>
 
     <div id="rekke">
         <div class="sentrering">
@@ -164,19 +163,24 @@ a, a:hover, a:visited {text-decoration: none; color: #fff;}
 </div>
 
 <script>
-    var visittkort=document.getElementById("visittkort");
-    var rekke=document.getElementById("rekke");
+
+    //Gjør at visittkortene vises. Variabelen n er der for at knappen skal være en toggle knapp.
+    visittkort=document.getElementById("visittkort");
+    rekke=document.getElementById("rekke");
+
+    rekke.hidden=true;
 
     n=0;
-    rekke.hidden=true;
 
     visittkort.onclick=function (){
         n++;
-        if (n==2){
-            n=0;
+        rekke.hidden=true;
+        if (n==1){
+            n=-1;
             rekke.hidden=false;
         }
-    };
+    }
+
 
 </script>
 
