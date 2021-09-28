@@ -42,7 +42,7 @@
 
 
     </style>
-    <!---
+    <!--
        [[[[[[[[     [[[[[[[[        [[[[   [[[[   [[[[  [[[[
        [::::::[    [::[             [::[   [::[   [::[  [::[
          [::[      [::[             [::[   [::[   [::[  [::[
@@ -50,7 +50,7 @@
          [::[          [::[         [::[   [::[         [::[
        [::::::[        [::[         [::[   [::[         [::[
        [[[[[[[[   [[[[[[[[          [[[[   [[[[         [[[[
-    --->
+    -->
 </head>
 <body>
 <section class="navbar">
@@ -62,9 +62,15 @@
 </section>
 
 <script>
-    // Se https://html.spec.whatwg.org/multipage/scripting.html#restrictions-for-contents-of-script-elements
-    // Her skrives kode i JavaScript som "gir liv" til bilde på skjermen.
-</script>
 
+    fetch('https://bacit.info/hwr/20210926134925-47352fbdecddd9a754001f4e4abbf40f.json')
+        .then(response => response.json())
+        .then(data => console.log(data));
+
+    fetch('https://bacit.info/hwr/20210926162029-a89356bb617d3bbf870649c08570427e.json')
+        .then(response => response.json())
+        .then(data => console.log(data));
+
+</script>
 </body>
 </html>
