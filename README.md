@@ -1,4 +1,13 @@
+How we roll
 Github, Kanban og Github pages oppgave utført av gruppe 9B
+
+    [[[[[[[[     [[[[[[[[        [[[[   [[[[   [[[[  [[[[
+    [::::::[    [::[             [::[   [::[   [::[  [::[
+      [::[      [::[             [::[   [::[   [::[  [::[
+      [::[       [::::[   [[[[   [::[   [::[   [[[[[[[[[[
+      [::[          [::[         [::[   [::[         [::[
+    [::::::[        [::[         [::[   [::[         [::[
+    [[[[[[[[   [[[[[[[[          [[[[   [[[[         [[[[
 
 Vi skal lage mockups til visittkort og presentere skisser for hvordan et interaktivt visittkort kan fungere.
 
