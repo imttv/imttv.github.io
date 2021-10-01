@@ -83,7 +83,7 @@ a, a:hover, a:visited {text-decoration: none; color: #fff;}
 }
 @keyframes skyvinn {
     0%   {margin-left:100px;}
-    100% {margin-left:0px;}
+    100% {margin-left:0;}
 }
 
 /* -NAVBAR DESIGN- */
@@ -174,5 +174,27 @@ a, a:hover, a:visited {text-decoration: none; color: #fff;}
     </div>
 </div>
 
+
+<script>
+
+    //Gjør at visittkortene vises. Variabelen n er der for at knappen skal være en toggle knapp.
+    visittkort=document.getElementById("visittkort");
+    rekke=document.getElementById("rekke");
+
+    rekke.hidden=true;
+
+   var n=0;
+
+    visittkort.onclick=function (){
+        n++;
+        rekke.hidden=true;
+        if (n===1){
+            n=-1;
+            rekke.hidden=false;
+        }
+    }
+
+
+</script>
 </body>
 </html>
