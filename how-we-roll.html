@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>HowWeRoll prototype (lagring)</title>
+    <title>HowWeRoll 9B</title>
     <!-- Med denne filen ønsker vi å bevise at vi kan samle inn data ... -->
- <!--
+ <!---
     [[[[[[[[     [[[[[[[[        [[[[   [[[[   [[[[  [[[[
     [::::::[    [::[             [::[   [::[   [::[  [::[
       [::[      [::[             [::[   [::[   [::[  [::[
@@ -14,11 +14,72 @@
       [::[          [::[         [::[   [::[         [::[
     [::::::[        [::[         [::[   [::[         [::[
     [[[[[[[[   [[[[[[[[          [[[[   [[[[         [[[[
- -->
+ --->
     <style>
+
+    /* -Slider Design- */
+
+    .slider {
+        -webkit-appearance: none;
+        width: 25%;
+        height: 15px;
+        background: #d3d3d3;
+        outline: none;
+        opacity: 0.7;
+        -webkit-transition: .2s;
+        transition: opacity .2s;
+    }
+
+    .slider:hover {
+        opacity: 1;
+    }
+
+    .slider::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 25px;
+        height: 25px;
+        background: #404c51;
+        cursor: pointer;
+    }
+
+
+    /* -Button Design- */
+    button {
+        background-color: #404c51;
+        border: none;
+        color: white;
+        padding: 10px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        border-radius: 25px;
+    }
+
+    button:hover {
+        opacity: 0.8;
+    }
+
+    button:active {
+        transform: translateY(1px);
+    }
+
+    /* -Data form Design- */
+    form {
+        text-align: center;
+    }
+
+    .results {
+        text-align: center;
+        margin-top: 7em;
+    }
+
     /* -NAVBAR DESIGN- */
+
     body {
     margin: 0;
+    font-family: Arial, sans-serif;
     }
     .navbar {
     margin: 0;
@@ -26,7 +87,6 @@
     font-size: 25px;
     text-align: center;
     background-color: #404c51;
-    font-family: Arial, sans-serif;
     }
     ul {
     }
@@ -56,9 +116,9 @@
 <body>
 <section class="navbar">
     <ul>
-        <li><a href="index.html">Homepage</a></li>
-        <li><a class="active" href="how-we-roll.html">how-we-roll</a></li>
-        <li><a href="hwr-report.html">hwr-report</a></li>
+        <li><a href="index.html">Visittkort</a></li>
+        <li><a class="active" href="how-we-roll.html">HowWeRoll</a></li>
+        <li><a href="hwr-report.html">HWR Report</a></li>
     </ul>
 </section>
 
@@ -66,39 +126,41 @@
   <!-- Issue se https://html.spec.whatwg.org/multipage/forms.html#introduction-4 -->
   <hr>
   <form>
-      <p><label for="data01">Data inn sdsdsd #1</label>
+      <p><label for="data01">Fornavn</label>
           <input type="text" name="data01" id="data01" /></p>
 
-      <p><label for="data02">Data inn felt #2</label>
+      <p><label for="data02">Etternavn</label>
       <input type="text" name="data02" id="data02" /></p>
 
       <p>HowWeRoll-parametre:</p>
 
+      <div class="slidecontainer">
       <p>
           <!-- dorn - day or night -->
           <label for="dorn">Morgenfugl</label>
-          <input type="range" id="dorn" name="dorn" value="50">
-          <label for="dorn">Nattugle</label>
+          <input type="range" id="dorn" name="dorn" value="50" class="slider">
+          <label for="dorn">Natteravn</label>
       </p>
 
       <p>
           <!-- cora - cooperate or alone -->
-          <label for="cora">Jobbe med det sammen</label>
-          <input type="range" id="cora" name="cora" value="50">
-          <label for="cora">Gå for seg selv og tenke</label>
+          <label for="cora">Sammarbeide med andre</label>
+          <input type="range" id="cora" name="cora" value="50" class="slider">
+          <label for="cora">Jobbe for seg selv</label>
       </p>
+      </div>
 
       <p>
           <label>Please choose one of the numbers:
               <select name="numb">
                       <option value="ten">10</option>
                       <option value="twenty">20</option>
-                      <option value="forty" disabled>30</option>
+                      <option value="thirty">30</option>
               </select>
           </label>
       </p>
 
-      <button type="submit">Gjør noe</button>
+      <button type="submit">Utfør</button>
   </form>
 
   <div class="results">
