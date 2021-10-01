@@ -78,7 +78,7 @@ a, a:hover, a:visited {text-decoration: none; color: #fff;}
 }
 @keyframes skyvinn {
     0%   {margin-left:100px;}
-    100% {margin-left:0px;}
+    100% {margin-left:0;}
 }
 
 /* -NAVBAR DESIGN- */
@@ -166,12 +166,12 @@ body {margin: 0;}
 
     rekke.hidden=true;
 
-    n=0;
+   var n=0;
 
     visittkort.onclick=function (){
         n++;
         rekke.hidden=true;
-        if (n==1){
+        if (n===1){
             n=-1;
             rekke.hidden=false;
         }
