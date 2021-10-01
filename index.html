@@ -2,9 +2,7 @@
 <html lang="nb">
 <head>
     <meta charset="UTF-8" />
-    <title>Visittkort 9B</title>
-
-   
+    <title>Visittkort</title>
     <style>
 body {background: #151515;}
 
@@ -26,10 +24,7 @@ a, a:hover, a:visited {text-decoration: none; color: #fff;}
     animation-timing-function: ease;
 }
 .sentrering {display: flex;justify-content: center;}
-.visittkort:hover{
-    background: #404c51;
-    color: #bbfcff;
-}
+.visittkort:hover{background: #404c51;}
 .visittkort {
     color: #fff;
     height: 100px;
@@ -83,7 +78,7 @@ a, a:hover, a:visited {text-decoration: none; color: #fff;}
 }
 @keyframes skyvinn {
     0%   {margin-left:100px;}
-    100% {margin-left:0;}
+    100% {margin-left:0px;}
 }
 
 /* -NAVBAR DESIGN- */
@@ -124,28 +119,21 @@ a, a:hover, a:visited {text-decoration: none; color: #fff;}
     </style>
     </head>
 <body>
-<script>
-    function knapp(divId) {
-        $("#" + divId).toggle();
-    }
-</script>
 
 <section class="navbar">
     <ul>
-        <li><a class="active" href="index.html">Visittkort</a></li>
-        <li><a href="how-we-roll.html">HowWeRoll</a></li>
-        <li><a href="hwr-report.html">HWR Report</a></li>
+        <li><a class="active" href="index.html">Homepage</a></li>
+        <li><a href="how-we-roll.html">how-we-roll</a></li>
+        <li><a href="hwr-report.html">hwr-report</a></li>
     </ul>
 </section>
 
 <div id="hovedkontainer">
-    <a href="#" onclick="knapp('rekke');">
-        <div class="visittkort">
+        <div class="visittkort" id="visittkort">
             Visittkort for gruppe 9B
         </div>
-    </a>
 
-    <div id="rekke" style="display:none;">
+    <div id="rekke">
         <div class="sentrering">
             <div class="kort">
                 <h1>Jostein</h1>
@@ -160,7 +148,7 @@ a, a:hover, a:visited {text-decoration: none; color: #fff;}
                     Med kreativitet, flittig feilsøkings kunnskap og leder innstilling, står Michael klar til å takle nye oppgaver og søke ny lærdom i tiden som kommer.</p>
             </div>
             <div class="kort">
-                <h1>Hans Chr</h1>
+                <h1>Hans Christian</h1>
                 <img src="./media/3.jpg" alt="Bilde av Hans Christian" title="Bilde av Hans Christian" />
                 <p> ... er fra Kristiansand. Han er ny som student på UIA, og er motivert og positivt innstilt for studiet sitt. På studiespesialisering ved Vågsbygd VGS gjennomførte han valgfagene IT1 og IT2. Som en følge har han fått grunnleggende kunnskap og ferdigheter innenfor kodespråkene HTML, CSS og JavaScript. Hans Christian har også kompetanse innenfor hardware ettersom at han har bygget og oppgradert egen stasjonær PC. Han er glad i samarbeid, kommunikasjon og problemløsning.</p>
             </div>
@@ -174,7 +162,6 @@ a, a:hover, a:visited {text-decoration: none; color: #fff;}
     </div>
 </div>
 
-
 <script>
 
     //Gjør at visittkortene vises. Variabelen n er der for at knappen skal være en toggle knapp.
@@ -183,12 +170,12 @@ a, a:hover, a:visited {text-decoration: none; color: #fff;}
 
     rekke.hidden=true;
 
-   var n=0;
+    n=0;
 
     visittkort.onclick=function (){
         n++;
         rekke.hidden=true;
-        if (n===1){
+        if (n==1){
             n=-1;
             rekke.hidden=false;
         }
@@ -196,5 +183,6 @@ a, a:hover, a:visited {text-decoration: none; color: #fff;}
 
 
 </script>
+
 </body>
 </html>
