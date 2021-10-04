@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>How We Roll 9B</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
 
     .slider {
         -webkit-appearance: none;
@@ -56,35 +57,47 @@
         font-family: Arial, sans-serif;
         font-size: 14px;
     }
+    .navbar h2 {
+        display: inline-block;
+        color: white;
+        font-size: 30px;
+        margin-left: 25px;
+        font-family: 'Roboto', sans-serif;
+    }
     .navbar {
         margin: 0;
-        padding: 5px;
         font-size: 25px;
-        text-align: center;
-        background-color: #404c51;
+        background-color: #333;
+        font-family: 'Roboto', sans-serif;
+        width: 100%;
+
     }
-    ul {}
+    ul {
+        float: right;
+        margin-right: 25px;
+    }
     ul li {
         display: inline-block;
-        margin-right: 10px;
-        color: #fff;
+
     }
     ul li a {
         text-decoration: none;
-        color: #fff;
+        color: white;
+        margin-right: 25px;
     }
     ul li a:hover {
         color: #bbfcff;
         transition: 0.25s;
     }
     ul li a.active {
-        border-bottom: 3px solid white;
+        border-bottom: 1px solid #fff;
         padding-bottom: 5px;
     }
     </style>
 </head>
 <body>
 <section class="navbar">
+    <h2>UiA | Gruppe 9b</h2>
     <ul>
         <li><a href="index.html">Visittkort</a></li>
         <li><a class="active" href="how-we-roll.html">How We Roll</a></li>
