@@ -1,42 +1,61 @@
-<!DOCTYPE html>
-<html lang="nb">
-<head>
+                <!DOCTYPE html>
+                <html lang="nb">
+                <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Visittkort for gruppe 9B</title>
+    <title>Visittkort for gruppe 9b</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+
         body {
-            background: #151515;
+            background-image: url("https://i.imgur.com/c3MXPRT.jpg");
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
             margin: 0;
         }
 
-        a, a:hover, a:visited {text-decoration: none; color: #fff;}
+        a, a:hover, a:visited {
+        }
         #hovedkontainer {
             position: absolute;
-            top: 20%;
+            top: 25%;
             left: 0;
             right:0;
-            min-height: 750px;
+            min-height: 550px;
         }
-        #rekke {}
-        .visittkort,.kort{background: #293033;}
+        #rekke {
+            //sdfijidfsjisdj
+        }
+        .visittkort,.kort{
+            
+        }
         .sentrering {
             display: flex;
             justify-content: center;
         }
-        .visittkort:hover{background: #404c51; color: #bbfcff;}
+        .visittkort:hover {
+            color: #bbfcff;
+            transform: scale(1.2);
+            transition: transform .3s;
+            border: 3px solid #bbfcff;
+        }
         .visittkort {
             color: #fff;
-            height: 100px;
-            width: 100%;
-            padding: 50px 0 0 0;
+            padding: 10px;
             font-size: 45px;
-            text-align: center;
             font-family: Arial, sans-serif;
-            border-top: 30px solid #404c51;
-            border-bottom: 30px solid #404c51;
+            border: 3px solid #fff;
+            margin: 0;
+            position: absolute;
+            right: 25%;
+            left: 25%;
+            text-align: center;
+            cursor: pointer;
         }      
-        .kort:hover{background: #404c51;}
+        .kort:hover{
+            background: #333;
+        }
         .kort img {
             display: block;
             float:right;
@@ -49,6 +68,9 @@
             float:left;
             margin-top: 70px;
         }
+        #rekke {
+            margin-top: 80px;
+        }
         .kort p {
             display:block;
             float:left;
@@ -58,10 +80,10 @@
         .kort {
             float: left;
             color: #fff;
-            padding: 30px;
-            height: 650px;
+            padding: 25px;
+            height: 550px;
             width: 300px;
-            margin-right: 20px;
+            margin-right: 0;
             margin-top: 20px;
             font-family: Arial, sans-serif;
             font-size: 20px;
@@ -71,6 +93,7 @@
             border: 1px solid #ccc;
             word-wrap: normal;
             overflow: hidden;
+            background: #333;
         }
         @keyframes skyvned {
             0%   {margin-top:100px;}
@@ -78,50 +101,178 @@
         }
         @keyframes skyvinn {
             0%   {margin-left:100px;}
-            100% {margin-left:0px;}
+            100% {margin-left:0;}
+        }
+        .navbar h2 {
+            display: inline-block;
+            color: white;
+            font-size: 30px;
+            margin-left: 25px;
+            font-family: 'Roboto', sans-serif;
         }
         .navbar {
             margin: 0;
-            padding: 5px;
             font-size: 25px;
-            text-align: center;
-            background-color: #404c51;
-            font-family: Arial, sans-serif;
+            background-color: #333;
+            font-family: 'Roboto', sans-serif;
+            width: 100%;
         }
         ul {
+            float: right;
+            margin-right: 25px;
         }
         ul li {
             display: inline-block;
-            margin-right: 10px;
-            color: #fff;
         }
         ul li a {
             text-decoration: none;
-            color: #fff;
+            margin-right: 25px;
+            color: white;
         }
         ul li a:hover {
             color: #bbfcff;
             transition: 0.25s;
         }
         ul li a.active {
-            border-bottom: 3px solid #fff;
+            border-bottom: 1px solid #fff;
             padding-bottom: 5px;
         }
+
+        /* Mobil/Tablet skjerm */
+             @media only screen and (max-width: 1000px) {
+            .navbar h2 {
+                margin-left: 0;
+                margin-bottom: 0;
+                color: white;
+                font-size: 30px;
+                font-family: 'Roboto', sans-serif;
+            }
+            .navbar {
+                margin: 0;
+                font-size: 25px;
+                background-color: #333333;
+                font-family: 'Roboto', sans-serif;
+                width: auto;
+                min-width: 500px;
+                text-align: center;
+                padding-bottom: 10px;
+            }
+
+            ul {
+                margin-right: 0;
+                float: none;
+            }
+
+            ul li {
+                display: inline-block;
+            }
+
+            ul li a {
+                text-decoration: none;
+                margin-right: 15px;
+            }
+
+            .visittkort {
+                color: #fff;
+                padding: 10px;
+                font-size: 20px;
+                font-family: Arial, sans-serif;
+                border: 1px solid #fff;
+                margin: 0;
+                position: absolute;
+                right: 25%;
+                left: 25%;
+                text-align: center;
+            }
+
+            .visittkort:hover {
+                color: #ffffff;
+                transform: scale(1);
+                transition: transform .0s;
+                border: 1px solid #ffffff;
+            }
+
+            #hovedkontainer {
+                position: absolute;
+                top: 20%;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                margin: auto;
+                width: 500px;
+                height: 100px;
+                cursor: pointer;
+            }
+
+            .kort {
+                float: unset;
+                color: #ffffff;
+                padding: 25px;
+                height: 350px;
+                width: auto;
+                min-width: 400px;
+                margin-right: 0;
+                margin-top: 0;
+                font-family: Arial, sans-serif;
+                font-size: 20px;
+                animation-name: skyvinn;
+                animation-duration: 1s;
+                animation-timing-function: ease;
+                border: 1px solid #ccc;
+                word-wrap: normal;
+                overflow: hidden;
+                background: #333;
+            }
+
+            .sentrering {
+                display: block !important;
+                justify-content: center;
+            }
+            @keyframes skyvinn {
+            0%   {margin-bottom:100px;}
+            100% {margin-bottom:0;}
+            }
+        }
+        @media only screen and (max-width: 360px) {
+            #hovedkontainer {
+                position: absolute;
+                top: 35%;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                margin: auto;
+                width: 500px;
+                height: 100px;
+            }
+        }
+             @media only screen and (max-width: 375px) {
+                 #hovedkontainer {
+                     position: absolute;
+                     top: 60%;
+                     left: 0;
+                     right: 0;
+                     bottom: 0;
+                     margin: auto;
+                     width: 500px;
+                     height: 100px;
+             }
+        }
+
+
     </style>
     </head>
 <body>
 
-    
-    
 <section class="navbar">
+    <h2>UiA | Gruppe 9b</h2>
     <ul>
         <li><a class="active" href="index.html">Visittkort</a></li>
         <li><a href="how-we-roll.html">How We Roll</a></li>
         <li><a href="hwr-report.html">HWR Report</a></li>
     </ul>
-</section> 
-    
+</section>
     <div id="hovedkontainer"> <!-- Hovedkontainer som samler alt innhold på siden i et rammeverk-->
+
         <div class="visittkort" id="visittkort">
             Visittkort for gruppe 9B
         </div>
