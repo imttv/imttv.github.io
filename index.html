@@ -1,6 +1,6 @@
-<!DOCTYPE html>
-<html lang="nb">
-<head>
+                <!DOCTYPE html>
+                <html lang="nb">
+                <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Visittkort for gruppe 9b</title>
@@ -8,7 +8,7 @@
         @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
 
         body {
-            background-image: url("https://i.pinimg.com/originals/11/1a/03/111a03133d14214539c96e0f657dff1a.png?q=65");
+            background-image: url("https://i.imgur.com/c3MXPRT.jpg");
             background-repeat: no-repeat;
             background-attachment: fixed;
             background-size: cover;
@@ -23,7 +23,7 @@
             top: 25%;
             left: 0;
             right:0;
-            min-height: 750px;
+            min-height: 550px;
         }
         #rekke {
 
@@ -81,9 +81,9 @@
             float: left;
             color: #fff;
             padding: 25px;
-            height: 650px;
+            height: 550px;
             width: 300px;
-            margin-right: 0px;
+            margin-right: 0;
             margin-top: 20px;
             font-family: Arial, sans-serif;
             font-size: 20px;
@@ -101,7 +101,7 @@
         }
         @keyframes skyvinn {
             0%   {margin-left:100px;}
-            100% {margin-left:0px;}
+            100% {margin-left:0;}
         }
         .navbar h2 {
             display: inline-block;
@@ -136,6 +136,127 @@
             border-bottom: 1px solid #fff;
             padding-bottom: 5px;
         }
+
+        /* Mobil/Tablet skjerm */
+             @media only screen and (max-width: 1000px) {
+            .navbar h2 {
+                margin-left: 0;
+                margin-bottom: 0;
+                color: white;
+                font-size: 30px;
+                font-family: 'Roboto', sans-serif;
+            }
+            .navbar {
+                margin: 0;
+                font-size: 25px;
+                background-color: #333333;
+                font-family: 'Roboto', sans-serif;
+                width: auto;
+                min-width: 500px;
+                text-align: center;
+                padding-bottom: 10px;
+            }
+
+            ul {
+                margin-right: 0;
+                float: none;
+            }
+
+            ul li {
+                display: inline-block;
+            }
+
+            ul li a {
+                text-decoration: none;
+                margin-right: 15px;
+            }
+
+            .visittkort {
+                color: #fff;
+                padding: 10px;
+                font-size: 20px;
+                font-family: Arial, sans-serif;
+                border: 1px solid #fff;
+                margin: 0;
+                position: absolute;
+                right: 25%;
+                left: 25%;
+                text-align: center;
+            }
+
+            .visittkort:hover {
+                color: #ffffff;
+                transform: scale(1);
+                transition: transform .0s;
+                border: 1px solid #ffffff;
+            }
+
+            #hovedkontainer {
+                position: absolute;
+                top: 20%;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                margin: auto;
+                width: 500px;
+                height: 100px;
+            }
+
+            .kort {
+                float: unset;
+                color: #ffffff;
+                padding: 25px;
+                height: 350px;
+                width: auto;
+                min-width: 400px;
+                margin-right: 0;
+                margin-top: 0;
+                font-family: Arial, sans-serif;
+                font-size: 20px;
+                animation-name: skyvinn;
+                animation-duration: 1s;
+                animation-timing-function: ease;
+                border: 1px solid #ccc;
+                word-wrap: normal;
+                overflow: hidden;
+                background: #333;
+            }
+
+            .sentrering {
+                display: block !important;
+                justify-content: center;
+            }
+            @keyframes skyvinn {
+            0%   {margin-bottom:100px;}
+            100% {margin-bottom:0;}
+            }
+        }
+        @media only screen and (max-width: 360px) {
+            #hovedkontainer {
+                position: absolute;
+                top: 35%;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                margin: auto;
+                width: 500px;
+                height: 100px;
+            }
+        }
+             @media only screen and (max-width: 375px) {
+                 #hovedkontainer {
+                     position: absolute;
+                     top: 60%;
+                     left: 0;
+                     right: 0;
+                     bottom: 0;
+                     margin: auto;
+                     width: 500px;
+                     height: 100px;
+             }
+        }
+
+
     </style>
     </head>
 <body>
