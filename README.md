@@ -6,7 +6,7 @@
 |----|-----------|------|
 |Daniel Gran|danieg13@uia.no|Kaldviking|
 |Hans Christian Morka|hanscm@uia.no|Blathee|
-|Jostein Engsæt|josteinen@uia.no|JosteinEng|
+|Jostein Engesæt|josteinen@uia.no|JosteinEng|
 |Ivar Michael Tangeraas|ivarmt@uia.no|imttv|
 
 ## Kanban og organisering (placeholder)
