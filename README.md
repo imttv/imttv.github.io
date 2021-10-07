@@ -1,13 +1,12 @@
-# How-we-roll
+## Gruppe 9B | Main Repository
 
+|Name|Mailadresse|Github|
+|----|-----------|------|
+|Daniel Gran|danieg13@uia.no|Kaldviking|
+|Hans Christian Morka|hanscm@uia.no|Blathee|
+|Jostein Engsæt|josteinen@uia.no|JosteinEng|
+|Ivar Michael Tangeraas|ivarmt@uia.no|imttv|
 
-    [[[[[[[[     [[[[[[[[        [[[[   [[[[   [[[[  [[[[
-    [::::::[    [::[             [::[   [::[   [::[  [::[
-      [::[      [::[             [::[   [::[   [::[  [::[
-      [::[       [::::[   [[[[   [::[   [::[   [[[[[[[[[[
-      [::[          [::[         [::[   [::[         [::[
-    [::::::[        [::[         [::[   [::[         [::[
-    [[[[[[[[   [[[[[[[[          [[[[   [[[[         [[[[
 
 Github, Kanban og Github pages oppgave utført av gruppe 9B
 
