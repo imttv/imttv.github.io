@@ -80,6 +80,18 @@
                 margin-right: 15px;
             }
         }
+
+        .data {
+            text-align: center;
+            border: 2px solid black;
+            margin: auto;
+            margin-top: 5%;
+            width: 50%;
+            padding: 10px;
+        }
+        .data2 {
+            display: none;
+        }
     </style>
 </head>
 <body>
@@ -92,18 +104,19 @@
     </ul>
 </section>
 <!-- Her skrives alt innhold, som man ønsker å "tegne" på skjermen. -->
-<div class="results" id="results">
-    <h2>Form Data</h2>
-    <pre></pre>
-</div>
+<section class="data">
+    <p></p>
+    Lim inn id: <input type="text" value="" id="timetrxidPASTE" style="width: 400px">
+    <div class="results" id="results">
+        <h2>Data:</h2>
+        <pre class="data2"></pre>
+    </div>
 
-<div id="debug"></div>
-<canvas id="report"></canvas>
-<!-- Her skrives alt innhold, som man ønsker å "tegne" på skjermen. -->
-<p></p>
-Lim inn id: <input type="text" value="" id="timetrxidPASTE" style="width: 400px">
-
+    <div id="debug"></div>
+    <canvas id="report"></canvas>
+</section>
 <script>
+
     <!-- Her skrives kode i JavaScript som "gir liv" til bilde på skjermen. -->
     var timetrxidPASTE=document.getElementById("timetrxidPASTE");
 
