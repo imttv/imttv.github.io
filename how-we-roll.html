@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nb">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -94,11 +94,11 @@
 
 
   <form>
-      <p><label for="data01">Fornavn</label>
-          <input type="text" name="data01" id="data01" /></p>
+      <p><label for="data01">Navn</label>
+          <input type="text" name="navn" id="data01" /></p>
 
-      <p><label for="data02">Etternavn</label>
-      <input type="text" name="data02" id="data02" /></p>
+      <p><label for="data02">Gruppe</label>
+      <input type="text" name="gruppe" id="data02" /></p>
 
       <p>HowWeRoll-parametre:</p>
 
@@ -112,23 +112,19 @@
 
       <p>
           <!-- cora - cooperate or alone -->
-          <label for="cora">Sammarbeide med andre</label>
+          <label for="cora">Samarbeide med andre</label>
           <input type="range" id="cora" name="cora" value="50" class="slider">
           <label for="cora">Jobbe for seg selv</label>
       </p>
       </div>
 
       <p>
-          <label>Please choose one of the numbers:
-              <select name="numb">
-                      <option value="ten">10</option>
-                      <option value="twenty">20</option>
-                      <option value="thirty">30</option>
-              </select>
+          <label>Alder:
+              <input type="number" name="alder" id="alder" max="100" min="10">
           </label>
       </p>
 
-      <button type="submit">Utfør</button>
+      <button type="submit" id="btnLagre">Lagre</button>
   </form>
 
   <div class="results">
@@ -136,7 +132,18 @@
       <pre></pre>
   </div>
 
+Kopier id: <input type="text" value="timetrxid" id="timetrxidCOPY" style="width: 400px" disabled>
+
   <script>
+      var timetrxidCOPY=document.getElementById("timetrxidCOPY");
+      var btnLagre=document.getElementById("btnLagre");
+
+      timetrxidCOPY.hidden=true;
+
+      btnLagre.onclick=function (){
+          timetrxidCOPY.hidden=false;
+      }
+
    // From https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch (seen 2021-09-27)
    // Example POST method implementation using fetch:
    async function postData(url = '', data = {}) {
@@ -165,6 +172,7 @@
         postData('https://bacit.info/', formJSON)
         .then(data => {
            results.innerText = JSON.stringify(data, null, 2);
+            timetrxidCOPY.value=data.time+"-"+data.trxid;
         });
    }
    const form = document.querySelector('form');

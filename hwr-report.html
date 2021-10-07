@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nb">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -46,16 +46,82 @@
         <li><a class="active" href="hwr-report.html">HWR Report</a></li>
     </ul>
 </section>
+<!-- Her skrives alt innhold, som man ønsker å "tegne" på skjermen. -->
+<div class="results" id="results">
+    <h2>Form Data</h2>
+    <pre></pre>
+</div>
+
+<div id="debug"></div>
+<canvas id="report"></canvas>
+<!-- Her skrives alt innhold, som man ønsker å "tegne" på skjermen. -->
+<p></p>
+Lim inn id: <input type="text" value="" id="timetrxidPASTE" style="width: 400px">
 
 <script>
+    <!-- Her skrives kode i JavaScript som "gir liv" til bilde på skjermen. -->
+    var timetrxidPASTE=document.getElementById("timetrxidPASTE");
 
-    fetch('https://bacit.info/hwr/20210926134925-47352fbdecddd9a754001f4e4abbf40f.json')
-        .then(response => response.json())
-        .then(data => console.log(data));
+    var canvas = document.getElementById('report');
+    var context = canvas.getContext('2d');
+    const results = document.querySelector('.results pre');
 
-    fetch('https://bacit.info/hwr/20210926162029-a89356bb617d3bbf870649c08570427e.json')
-        .then(response => response.json())
-        .then(data => console.log(data));
+
+    timetrxidPASTE.onchange=function () {
+
+        fetch("https://bacit.info/hwr/" +timetrxidPASTE.value+ ".json", {cache: 'no-cache'})
+            .then(response => response.json())
+            .then(data => {
+                console.log(data);
+                results.innerText = JSON.stringify(data, null, 2);
+                document.querySelector("#debug").innerText = "Fornavn: " + data.navn + "\nGruppe: " + data.gruppe + "\nAlder: " + data.alder;
+
+
+                context.font = '14px serif';
+                context.fillText('Jobbe tidlig', 10, 24);
+                context.fillText('Jobbe sent', 210, 24);
+
+                context.fillText('Jobbe sammen', 10, 74);
+                context.fillText('Jobbe alene', 210, 74);
+
+                context.beginPath();
+                context.moveTo(100, 20);
+                context.lineTo(200, 20);
+                context.stroke();
+
+                context.beginPath();
+                context.moveTo(100, 70);
+                context.lineTo(200, 70);
+                context.stroke();
+
+
+                var X = 100 + parseInt(data.dorn, 10);
+                var Y = 20;
+                var R = 5;
+                context.beginPath();
+                context.arc(X, Y, R, 0, 2 * Math.PI, false);
+                context.fillStyle = "lightgreen";
+                context.fill();
+                context.lineWidth = 1;
+                context.strokeStyle = "black";
+                context.stroke();
+                context.closePath();
+
+                var X = 100 + parseInt(data.cora, 10);
+                var Y = 70;
+                var R = 5;
+                context.beginPath();
+                context.arc(X, Y, R, 0, 2 * Math.PI, false);
+                context.fillStyle = "red";
+                context.fill();
+                context.lineWidth = 1;
+                context.strokeStyle = "black";
+                context.stroke();
+                context.closePath();
+
+            });
+    }
+
 
 </script>
 </body>
