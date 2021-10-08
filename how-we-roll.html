@@ -5,8 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>How We Roll 9B</title>
     <style>
+/* --------- Font som blir brukt i Navbar --------- */
         @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
 
+/* --------- Design av slider --------- */
         .slider {
             -webkit-appearance: none;
             width: 25%;
@@ -29,6 +31,7 @@
             cursor: pointer;
         }
 
+/* --------- Design av "Lagre" knapp --------- */
         button {
             background-color: #404c51;
             border: none;
@@ -60,6 +63,8 @@
             font-family: Arial, sans-serif;
             font-size: 14px;
         }
+
+/* --------- Navbar design --------- */
         .navbar h2 {
             display: inline-block;
             color: white;
@@ -96,64 +101,71 @@
             border-bottom: 1px solid #fff;
             padding-bottom: 5px;
         }
-        /* Mobil/Tablet skjerm */
-        @media only screen and (max-width: 1000px) {
-            .navbar h2 {
-                margin-left: 0px;
-                margin-bottom: 0px;
-                color: white;
-                font-size: 30px;
-                font-family: 'Roboto', sans-serif;
-            }
-            .navbar {
-                margin: 0;
-                font-size: 25px;
-                background-color: #333333;
-                font-family: 'Roboto', sans-serif;
-                width: auto;
-                min-width: 500px;
-                text-align: center;
-                padding-bottom: 10px;
-            }
 
-            ul {
-                margin-right: 0px;
-                float: none;
-            }
-
-            ul li {
-                display: inline-block;
-            }
-
-            ul li a {
-                text-decoration: none;
-                margin-right: 15px;
-            }
+/* --------- Gjør hjemmesiden responsive --------- */
+    @media only screen and (max-width: 1000px) {
+        .navbar h2 {
+            margin-left: 0px;
+            margin-bottom: 0px;
+            color: white;
+            font-size: 30px;
+            font-family: 'Roboto', sans-serif;
+        }
+        .navbar {
+            margin: 0;
+            font-size: 25px;
+            background-color: #333333;
+            font-family: 'Roboto', sans-serif;
+            width: auto;
+            min-width: 500px;
+            text-align: center;
+            padding-bottom: 10px;
         }
 
+        ul {
+            margin-right: 0px;
+            float: none;
+        }
+
+        ul li {
+            display: inline-block;
+        }
+
+        ul li a {
+            text-decoration: none;
+            margin-right: 15px;
+        }
+    }
+
+/* --------- Design av data ID felt --------- */
         .id {
             text-align: center;
             margin-top: 2%;
         }
 
+/* --------- Design av overskrift/Data innfelt "Fyll inn informasjon" --------- */
         .form {
             margin-top: 5%;
         }
         .form h2 {
             text-align: center;
         }
-    </style>
-</head>
-<body>
-<section class="navbar">
-    <h2>UiA | Gruppe 9b</h2>
-    <ul>
-        <li><a href="index.html">Visittkort</a></li>
-        <li><a class="active" href="how-we-roll.html">How We Roll</a></li>
-        <li><a href="hwr-report.html">HWR Report</a></li>
-    </ul>
-</section>
 
+  </style>
+ </head>
+<body>
+
+<!----------- Navbar ----------->
+        <section class="navbar">
+            <h2>UiA | Gruppe 9b</h2>
+            <ul>
+                <li><a href="index.html">Visittkort</a></li>
+                <li><a class="active" href="how-we-roll.html">How We Roll</a></li>
+                <li><a href="hwr-report.html">HWR Report</a></li>
+            </ul>
+        </section>
+
+<!----------- Visuelle av data innfelt ----------->
 <section class="form">
     <h2>Fyll inn informasjon</h2>
     <form>
@@ -191,16 +203,20 @@
     </form>
 </section>
 
-<div class="id">
-    Kopier id: <input type="text" value="timetrxid" id="timetrxidCOPY" style="width: 400px" disabled>
-</div>
+<!----------- Visuelle av data ID ----------->
+        <div class="id">
+            Kopier id: <input type="text" value="timetrxid" id="timetrxidCOPY" style="width: 400px" disabled>
+        </div>
 
-<div class="results">
-    <h2>Form Data</h2>
-    <pre></pre>
-</div>
+        <div class="results">
+            <h2>Form Data</h2>
+            <pre></pre>
+        </div>
+
+<!----------- Script ----------->
 
 <script>
+<!----------- Lagring av data ----------->
     var timetrxidCOPY=document.getElementById("timetrxidCOPY");
     var btnLagre=document.getElementById("btnLagre");
 
@@ -210,6 +226,7 @@
         timetrxidCOPY.hidden=false;
     }
 
+<!----------- Kode fra Janis ----------->
     // From https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch (seen 2021-09-27)
     // Example POST method implementation using fetch:
     async function postData(url = '', data = {}) {

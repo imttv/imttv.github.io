@@ -5,8 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Visittkort for gruppe 9b</title>
     <style>
+/* --------- Font som blir brukt i Navbar --------- */
         @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
 
+/* --------- Bakgrunnsbilde, og helhetlig design i body element --------- */
         body {
             background-image: url("https://i.imgur.com/c3MXPRT.jpg");
             background-repeat: no-repeat;
@@ -15,6 +17,7 @@
             margin: 0;
         }
 
+/* --------- Hovedkontainer for visittkort innhold --------- */
         a, a:hover, a:visited {
         }
         #hovedkontainer {
@@ -24,16 +27,12 @@
             right:0;
             min-height: 550px;
         }
-        #rekke {
-            //sdfijidfsjisdj
-        }
-        .visittkort,.kort{
-            
-        }
         .sentrering {
             display: flex;
             justify-content: center;
         }
+
+/* --------- Visittkort knapp --------- */
         .visittkort:hover {
             color: #bbfcff;
             transform: scale(1.2);
@@ -52,10 +51,9 @@
             left: 25%;
             text-align: center;
             cursor: pointer;
-        }      
-        .kort:hover{
-            background: #333;
         }
+
+/* --------- Design av visittkort --------- */
         .kort img {
             display: block;
             float:right;
@@ -95,6 +93,8 @@
             overflow: hidden;
             background: #333;
         }
+
+/* --------- Visittkort animasjon --------- */
         @keyframes skyvned {
             0%   {margin-top:100px;}
             100% {margin-top:20px;}
@@ -103,6 +103,8 @@
             0%   {margin-left:100px;}
             100% {margin-left:0;}
         }
+
+/* --------- Navbar design --------- */
         .navbar h2 {
             display: inline-block;
             color: white;
@@ -138,7 +140,7 @@
             padding-bottom: 5px;
         }
 
-        /* Mobil/Tablet skjerm */
+/* --------- Gjør hjemmesiden responsive --------- */
              @media only screen and (max-width: 1000px) {
             .navbar h2 {
                 margin-left: 0;
@@ -257,11 +259,11 @@
                      height: 100px;
              }
         }
-
-
     </style>
     </head>
 <body>
+
+<!----------- Navbar ----------->
 
 <section class="navbar">
     <h2>UiA | Gruppe 9b</h2>
@@ -271,9 +273,11 @@
         <li><a href="hwr-report.html">HWR Report</a></li>
     </ul>
 </section>
-    <div id="hovedkontainer"> <!-- Hovedkontainer som samler alt innhold på siden i et rammeverk-->
 
-        <div class="visittkort" id="visittkort">
+<!----------- Hovedkontainer som samler alt innhold på siden i et rammeverk ----------->
+    <div id="hovedkontainer">
+
+        <div class="visittkort" id="visittkort"> <!-- Visittkort knappen -->
             Visittkort for gruppe 9B
         </div>
 
@@ -307,7 +311,7 @@
 </div>
 
 <script>
-    //Gjør at visittkortene vises. Variabelen n er der for at knappen skal være en toggle knapp.
+    <!-- Gjør at visittkortene vises. Variabelen n er der for at knappen skal være en toggle knapp. -->
     visittkort=document.getElementById("visittkort");
     rekke=document.getElementById("rekke");
 
