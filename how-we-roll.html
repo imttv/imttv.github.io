@@ -105,8 +105,6 @@
 /* --------- Gjør hjemmesiden responsive --------- */
     @media only screen and (max-width: 1000px) {
         .navbar h2 {
-            margin-left: 0px;
-            margin-bottom: 0px;
             color: white;
             font-size: 30px;
             font-family: 'Roboto', sans-serif;
@@ -123,7 +121,6 @@
         }
 
         ul {
-            margin-right: 0px;
             float: none;
         }
 
@@ -137,13 +134,13 @@
         }
     }
 
-/* --------- Design av data ID felt --------- */
+/* -- Design av data ID felt -- */
         .id {
             text-align: center;
             margin-top: 2%;
         }
 
-/* --------- Design av overskrift/Data innfelt "Fyll inn informasjon" --------- */
+/* -- Design av overskrift/Data innfelt "Fyll inn informasjon" -- */
         .form {
             margin-top: 5%;
         }
@@ -155,7 +152,7 @@
  </head>
 <body>
 
-<!----------- Navbar ----------->
+<!-- Navbar -->
         <section class="navbar">
             <h2>UiA | Gruppe 9b</h2>
             <ul>
@@ -165,7 +162,7 @@
             </ul>
         </section>
 
-<!----------- Visuelle av data innfelt ----------->
+<!-- Visuelle av data innfelt -->
 <section class="form">
     <h2>Fyll inn informasjon</h2>
     <form>
@@ -203,7 +200,7 @@
     </form>
 </section>
 
-<!----------- Visuelle av data ID ----------->
+<!-- Visuelle av data ID -->
         <div class="id">
             Kopier id: <input type="text" value="timetrxid" id="timetrxidCOPY" style="width: 400px" disabled>
         </div>
@@ -213,10 +210,10 @@
             <pre></pre>
         </div>
 
-<!----------- Script ----------->
+<!-- Script -->
 
 <script>
-<!----------- Lagring av data ----------->
+<!-- Lagring-av-data -->
     var timetrxidCOPY=document.getElementById("timetrxidCOPY");
     var btnLagre=document.getElementById("btnLagre");
 
@@ -226,7 +223,7 @@
         timetrxidCOPY.hidden=false;
     }
 
-<!----------- Kode fra Janis ----------->
+<!-- Kode fra Janis -->
     // From https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch (seen 2021-09-27)
     // Example POST method implementation using fetch:
     async function postData(url = '', data = {}) {
