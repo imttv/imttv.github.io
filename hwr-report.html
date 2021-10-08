@@ -5,12 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>How We Roll Report 9B</title>
     <style>
+/* --------- Font som blir brukt i Navbar --------- */
         @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
 
+/* --------- Definerer design på hele body design --------- */
         body {
             margin: 0;
             font-family: Arial, sans-serif;
         }
+
+/* --------- Navbar design --------- */
         .navbar h2 {
             display: inline-block;
             color: white;
@@ -46,41 +50,42 @@
             padding-bottom: 5px;
         }
 
-        /* Mobil/Tablet skjerm */
-        @media only screen and (max-width: 1000px) {
-            .navbar h2 {
-                margin-left: 0px;
-                margin-bottom: 0px;
-                color: white;
-                font-size: 30px;
-                font-family: 'Roboto', sans-serif;
-            }
-            .navbar {
-                margin: 0;
-                font-size: 25px;
-                background-color: #333333;
-                font-family: 'Roboto', sans-serif;
-                width: auto;
-                min-width: 500px;
-                text-align: center;
-                padding-bottom: 10px;
-            }
-
-            ul {
-                margin-right: 0px;
-                float: none;
-            }
-
-            ul li {
-                display: inline-block;
-            }
-
-            ul li a {
-                text-decoration: none;
-                margin-right: 15px;
-            }
+/* --------- Gjør hjemmesiden responsive --------- */
+    @media only screen and (max-width: 1000px) {
+        .navbar h2 {
+            margin-left: 0px;
+            margin-bottom: 0px;
+            color: white;
+            font-size: 30px;
+            font-family: 'Roboto', sans-serif;
+        }
+        .navbar {
+            margin: 0;
+            font-size: 25px;
+            background-color: #333333;
+            font-family: 'Roboto', sans-serif;
+            width: auto;
+            min-width: 500px;
+            text-align: center;
+            padding-bottom: 10px;
         }
 
+        ul {
+            margin-right: 0px;
+            float: none;
+        }
+
+        ul li {
+            display: inline-block;
+        }
+
+        ul li a {
+            text-decoration: none;
+            margin-right: 15px;
+        }
+    }
+
+/* --------- Design av visualiseringen av data --------- */
         .data {
             text-align: center;
             border: 2px solid black;
@@ -92,39 +97,45 @@
         .data2 {
             display: none;
         }
-    </style>
-</head>
-<body>
-<section class="navbar">
-    <h2>UiA | Gruppe 9b</h2>
-    <ul>
-        <li><a href="index.html">Visittkort</a></li>
-        <li><a href="how-we-roll.html">How We Roll</a></li>
-        <li><a class="active" href="hwr-report.html">HWR Report</a></li>
-    </ul>
-</section>
-<!-- Her skrives alt innhold, som man ønsker å "tegne" på skjermen. -->
-<section class="data">
-    <p></p>
-    Lim inn id: <input type="text" value="" id="timetrxidPASTE" style="width: 400px">
-    <div class="results" id="results">
-        <h2>Data:</h2>
-        <pre class="data2"></pre>
-    </div>
 
-    <div id="debug"></div>
-    <canvas id="report"></canvas>
-</section>
+  </style>
+ </head>
+<body>
+
+<!----------- Navbar ----------->
+    <section class="navbar">
+        <h2>UiA | Gruppe 9b</h2>
+        <ul>
+            <li><a href="index.html">Visittkort</a></li>
+            <li><a href="how-we-roll.html">How We Roll</a></li>
+            <li><a class="active" href="hwr-report.html">HWR Report</a></li>
+        </ul>
+    </section>
+
+<!----------- Visuelle av data ----------->
+    <section class="data">
+        <p></p>
+        Lim inn id: <input type="text" value="" id="timetrxidPASTE" style="width: 400px">
+        <div class="results" id="results">
+            <h2>Data:</h2>
+            <pre class="data2"></pre>
+        </div>
+
+        <div id="debug"></div>
+        <canvas id="report"></canvas>
+    </section>
+
+<!----------- Script ----------->
 <script>
 
-    <!-- Her skrives kode i JavaScript som "gir liv" til bilde på skjermen. -->
+<!----------- Data ID Innfelt ----------->
     var timetrxidPASTE=document.getElementById("timetrxidPASTE");
 
     var canvas = document.getElementById('report');
     var context = canvas.getContext('2d');
     const results = document.querySelector('.results pre');
 
-
+<!----------- Data innsamler ----------->
     timetrxidPASTE.onchange=function () {
 
         fetch("https://bacit.info/hwr/" +timetrxidPASTE.value+ ".json", {cache: 'no-cache'})
@@ -134,7 +145,7 @@
                 results.innerText = JSON.stringify(data, null, 2);
                 document.querySelector("#debug").innerText = "Fornavn: " + data.navn + "\nGruppe: " + data.gruppe + "\nAlder: " + data.alder;
 
-
+<!----------- Tegning av data i canvas  ----------->
                 context.font = '14px serif';
                 context.fillText('Jobbe tidlig', 10, 24);
                 context.fillText('Jobbe sent', 210, 24);
@@ -151,7 +162,6 @@
                 context.moveTo(100, 70);
                 context.lineTo(200, 70);
                 context.stroke();
-
 
                 var X = 100 + parseInt(data.dorn, 10);
                 var Y = 20;
@@ -179,8 +189,6 @@
 
             });
     }
-
-
-</script>
-</body>
+  </script>
+ </body>
 </html>
