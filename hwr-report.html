@@ -157,16 +157,16 @@
 
 <!-- Tegning av info i canvas  -->
     context.font = '14px serif';
-    context.fillText('Jobbe tidlig', 10, 24);
-    context.fillText('Jobbe sent', 210, 24);
+    context.fillText('Introvert', 10, 24);
+    context.fillText('Ekstrovert', 210, 24);
 
     context.fillText('Jostein', 410, 24,);
     context.fillText('Michael', 410, 44,);
     context.fillText('Hans Christian', 410, 64,);
     context.fillText('Daniel', 410, 84,);
 
-    context.fillText('Jobbe sammen', 10, 74);
-    context.fillText('Jobbe alene', 210, 74);
+    context.fillText('Jobbe fysisk', 10, 74);
+    context.fillText('Jobbe digitalt', 210, 74);
 
     context.beginPath();
     context.moveTo(100, 20);
@@ -231,7 +231,7 @@
 <!-- Innsamling av eldre data -->
 
 <!-- Josteins data -->
-fetch("https://bacit.info/hwr/20211010154421-7f9f74e0a2670f346e6f5b60e1073f5b.json", {cache: 'no-cache'})
+fetch("https://bacit.info/hwr/20211010181809-417b2138c73b82ab517b21bfe85f9a25.json", {cache: 'no-cache'})
     .then(response => response.json())
     .then(data => {
         console.log(data);
@@ -248,7 +248,7 @@ fetch("https://bacit.info/hwr/20211010154421-7f9f74e0a2670f346e6f5b60e1073f5b.js
         context.stroke();
         context.closePath();
 
-        var X = 100 + parseInt(data.dorn, 10);
+        var X = 100 + parseInt(data.iore, 10);
         var Y = 20;
         var R = 4;
         context.beginPath();
@@ -260,7 +260,7 @@ fetch("https://bacit.info/hwr/20211010154421-7f9f74e0a2670f346e6f5b60e1073f5b.js
         context.stroke();
         context.closePath();
 
-        var X = 100 + parseInt(data.cora, 10);
+        var X = 100 + parseInt(data.ford, 10);
         var Y = 70;
         var R = 4;
         context.beginPath();
@@ -274,12 +274,12 @@ fetch("https://bacit.info/hwr/20211010154421-7f9f74e0a2670f346e6f5b60e1073f5b.js
     });
 
 <!-- Michaels data -->
-fetch("https://bacit.info/hwr/20211010162128-1e5978d42fd07e93b4840657981086b2.json", {cache: 'no-cache'})
+fetch("https://bacit.info/hwr/20211010181744-fcda8bb9534fe6caa784263ff8130d65.json", {cache: 'no-cache'})
     .then(response => response.json())
     .then(data => {
         console.log(data);
 
-        var X = 100 + parseInt(data.dorn, 10);
+        var X = 100 + parseInt(data.iore, 10);
         var Y = 20;
         var R = 4;
         context.beginPath();
@@ -291,7 +291,7 @@ fetch("https://bacit.info/hwr/20211010162128-1e5978d42fd07e93b4840657981086b2.js
         context.stroke();
         context.closePath();
 
-        var X = 100 + parseInt(data.cora, 10);
+        var X = 100 + parseInt(data.ford, 10);
         var Y = 70;
         var R = 4;
         context.beginPath();
@@ -305,12 +305,12 @@ fetch("https://bacit.info/hwr/20211010162128-1e5978d42fd07e93b4840657981086b2.js
     });
 
 <!-- HCs data -->
-fetch("https://bacit.info/hwr/20211010162248-3c809f453d8e42ebf128d42b7d600656.json", {cache: 'no-cache'})
+fetch("https://bacit.info/hwr/20211010181716-63501b7138041b5b110f803ddffa3348.json", {cache: 'no-cache'})
     .then(response => response.json())
     .then(data => {
         console.log(data);
 
-        var X = 100 + parseInt(data.dorn, 10);
+        var X = 100 + parseInt(data.iore, 10);
         var Y = 20;
         var R = 4;
         context.beginPath();
@@ -322,7 +322,7 @@ fetch("https://bacit.info/hwr/20211010162248-3c809f453d8e42ebf128d42b7d600656.js
         context.stroke();
         context.closePath();
 
-        var X = 100 + parseInt(data.cora, 10);
+        var X = 100 + parseInt(data.ford, 10);
         var Y = 70;
         var R = 4;
         context.beginPath();
@@ -336,12 +336,12 @@ fetch("https://bacit.info/hwr/20211010162248-3c809f453d8e42ebf128d42b7d600656.js
     });
 
 <!-- Daniels data -->
-fetch("https://bacit.info/hwr/20211010162356-24f039c8b1e001852c9ac51cf8bb6b85.json", {cache: 'no-cache'})
+fetch("https://bacit.info/hwr/20211010181642-0f43a4adac16f0b870e05f186d1dba40.json", {cache: 'no-cache'})
     .then(response => response.json())
     .then(data => {
         console.log(data);
 
-        var X = 100 + parseInt(data.dorn, 10);
+        var X = 100 + parseInt(data.iore, 10);
         var Y = 20;
         var R = 4;
         context.beginPath();
@@ -353,7 +353,7 @@ fetch("https://bacit.info/hwr/20211010162356-24f039c8b1e001852c9ac51cf8bb6b85.js
         context.stroke();
         context.closePath();
 
-        var X = 100 + parseInt(data.cora, 10);
+        var X = 100 + parseInt(data.ford, 10);
         var Y = 70;
         var R = 4;
         context.beginPath();
@@ -392,7 +392,7 @@ fetch("https://bacit.info/hwr/20211010162356-24f039c8b1e001852c9ac51cf8bb6b85.js
                 context.stroke();
                 context.closePath();
 
-                var X = 100 + parseInt(data.dorn, 10);
+                var X = 100 + parseInt(data.iore, 10);
                 var Y = 20;
                 var R = 4;
                 context.beginPath();
@@ -404,7 +404,7 @@ fetch("https://bacit.info/hwr/20211010162356-24f039c8b1e001852c9ac51cf8bb6b85.js
                 context.stroke();
                 context.closePath();
 
-                var X = 100 + parseInt(data.cora, 10);
+                var X = 100 + parseInt(data.ford, 10);
                 var Y = 70;
                 var R = 4;
                 context.beginPath();
