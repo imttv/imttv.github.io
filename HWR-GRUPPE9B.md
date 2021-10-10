@@ -9,6 +9,13 @@
 |Jostein Engesæt|josteinen@uia.no|JosteinEng|
 |Ivar Michael Tangeraas|ivarmt@uia.no|imttv|
 
+### Viktige lenker for oppgaven 
+
+Hovedrepository: https://github.com/imttv/imttv.github.io 
+
+GitHub Page: https://imttv.github.io/
+
+### Figurliste:
 - Figur 1. Viser eksempel på Brukerhistorie 01.
 - Figur 2. Viser eksempel Brukerhistorie 02.
 - Figur 3. Viser eksempel for wireframe layout.
@@ -31,6 +38,8 @@ Oppgaven som omhandler visittkort, ble delt opp i kanban-bordet på GitHub. Hver
 
 ## Wireframe, brukerhistorie og endelig design 
 I utviklingsprosessen lagde vi flere utkast og skisser til designløsninger for hvordan et ferdig design kunne bli seende ut. Her fikk hele gruppen prøvd seg frem før vi endte opp med det endelige designet vi valgte å gå for. Kun små justeringer har blitt gjort i forhold til layout underveis. De forskjellige valgene vi foretok og responsivitet har vi beskrevet litt lengre ned i teksten.
+
+Figurene under viser en visualisering av hvordan vi tenkte å utføre design av visittkortene. Målet med designet var å ha en knapp som viser navnet på gruppen, og ved et klikk så kommer visittkortet til gruppemedlemmene frem. I skissene valgte vi å vise informasjon om personene på hover, men i selve HWR oppgaven valgte vi å forenkle det ved å vise informasjonen sammen med personene uten hover.
 
 #### Brukehistorie 1:
 ![Alt](media/brukerhistorie_01.jpg "Brukerhistorie 1")
