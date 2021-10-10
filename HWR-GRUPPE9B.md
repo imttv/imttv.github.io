@@ -34,12 +34,17 @@ I utviklingsprosessen lagde vi flere utkast og skisser til designløsninger for 
 
 #### Brukehistorie 1:
 ![Alt](media/brukerhistorie_01.jpg "Brukerhistorie 1")
+
 Figur 1
+
 #### Brukerhistorie 2:
 ![Alt](media/brukerhistorie_03.jpg "Brukerhistorie 2")
+
 Figur 2
+
 #### Wireframe:
 ![Alt](media/wireframe_01.jpg "Wireframe")
+
 Figur 3
 
 ### Programvare og Git Bash
@@ -54,7 +59,8 @@ Med prosjektet lagret lokalt, åpnet vi IntelliJ og åpnet mappen som et prosjek
 For å synliggjøre at hele gruppen har deltatt i gruppeoppgaven og skrevet kode, har vi hentet ut en skjermdump (figur 1) fra GitHub under “../graphs/contributors”. Skjermdumpen viser en graf og statistikk over antall “commits” og hvor mange kodelinjer som er lagt til og tatt bort av hvert gruppemedlem.
 
 ![Alt](media/contributions.png "Screenshot av Contributions")
-Figur 4
+
+ Figur 4
 
 ## Viktige valg i utviklingsprosessen
 #### Styling med CSS:
@@ -78,10 +84,12 @@ For å oppnå det har vi aktivt brukt inspiseringsverktøyet i nettleseren. Det 
 Ut ifra denne informasjonen har vi brukt CSS-standarden Media Query. I CSS definerte vi følgende: “@media only screen and (max-width: 375px) {}”.  Her forteller vi nettleseren at dersom bredden på skjermen er mindre enn eller lik 375 piksler, så skal en annen angitt stil være gjeldene. Ved å bruke Media Query kan vi sørge for at visittkortene vises ovenfor hverandre dersom oppløsningen på skjermen er for lav til å sidestille visittkortene (se eksempel i figur 5). Figur 6 viser hvordan nettsiden blir seende ut på en høyere oppløst skjerm.
 
 ![Alt](media/screenshot_02.png "Screenshot av eksempel på responsivt design - Mobil")
-Figur 5
+
+ Figur 5
 
 ![Alt](media/screenshot_01.png "Screenshot av eksempel på responsivt design - PC")
-Figur 6
+
+ Figur 6
 
 ## JavaScript, How-we-roll og HWR report 
 Koden som lager Form-elementene i how-we-roll.html og dataene som vises i hwr-report.html er satt opp med hensikt for å vise et dynamisk innhold. Vi har valgt å gjøre det på denne måten ettersom vi ikke har kontroll på den eksterne serveren som dataene lagres på. Vi har mulighet til å fremvise dataene statisk på siden hwr-report.html dersom vi hadde hardkodet spørringen i HTML-dokumentet.
@@ -94,13 +102,16 @@ Vi har utført en valideringssjekk av vår nettside ved å benytte W3 Schools si
 I figurene under kan man se hvordan “index.html”, how-we-roll.html og “hwr-report.html” valideres uten feiler eller advarsler.  
 
 ![Alt](media/w3vali.png "w3 validator screenshot01")
-Figur 7
+
+ Figur 7
 
 ![Alt](media/w3vali02.png "w3 validator screenshot02")
-Figur 8
+
+ Figur 8
 
 ![Alt](media/w3vali03.png "w3 validator screenshot03")
-Figur 9
+
+ Figur 9
 
 
 |Litteraturliste:|
