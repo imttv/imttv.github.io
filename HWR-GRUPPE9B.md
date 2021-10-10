@@ -9,6 +9,15 @@
 |Jostein Engesæt|josteinen@uia.no|JosteinEng|
 |Ivar Michael Tangeraas|ivarmt@uia.no|imttv|
 
+- Figur 1. Viser eksempel på Brukerhistorie 01.
+- Figur 2. Viser eksempel Brukerhistorie 02.
+- Figur 3. Viser eksempel for wireframe layout.
+- Figur 4. Screenshot av contributors graf.
+- Figur 5. Viser eksempel for hvordan layouten vises på en lavoppløst skjerm.
+- Figur 6. Viser eksempel for hvordan layouten vises på en høyere oppløst skjerm.
+- Figur 7. Viser at siden index.html valideres uten feil opp mot W3-validatoren.
+- Figur 8. Viser at siden how-we-roll.html valideres uten feil opp mot W3-validatoren.
+- Figur 9. Viser at siden hwr-report.html valideres uten feil opp mot W3-validatoren.
 
 ## Organisering og læringsutbytte
 I arbeidet med oppgaven “How We Roll”, gikk vi først sammen i gruppen og delte oppgaven inn i mindre og mer håndterlige deloppgaver. Gruppen vår, 9B, består av 4 medlemmer med ulike erfaringsnivåer på koding med HTML, CSS og JavaScript. Fordi vi bare er 4 på vår gruppe, valgte vi å bruke tid på å gå gjennom kode og hjelpe hverandre der hvor det var behov. På den måten har vi forsøkt å sikre at alle på gruppen sitter på den samme kompetansen og forstår hva koden vi skriver gjør. For å oppnå dette, har vi ved flere anledninger satt oss ned sammen på et grupperom og skrevet linje for linje med kode. Linjene ble så forklart om hva slags funksjon de hadde. Ved å gjøre arbeidet på denne måten har vi brukt mye tid, men det fine er at vi har fått en oppfriskning og lært mye nytt mens vi har jobbet tett sammen.
@@ -24,11 +33,14 @@ Oppgaven som omhandler visittkort, ble delt opp i kanban-bordet på GitHub. Hver
 I utviklingsprosessen lagde vi flere utkast og skisser til designløsninger for hvordan et ferdig design kunne bli seende ut. Her fikk hele gruppen prøvd seg frem før vi endte opp med det endelige designet vi valgte å gå for. Kun små justeringer har blitt gjort i forhold til layout underveis. De forskjellige valgene vi foretok og responsivitet har vi beskrevet litt lengre ned i teksten.
 
 #### Brukehistorie 1:
-![](media/brukerhistorie_01.jpg)
+![Alt](media/brukerhistorie_01.jpg "Brukerhistorie 1")
+Figur 1
 #### Brukerhistorie 2:
-![](media/brukerhistorie_03.jpg)
+![Alt](media/brukerhistorie_03.jpg "Brukerhistorie 2")
+Figur 2
 #### Wireframe:
-![](media/wireframe_01.jpg)
+![Alt](media/wireframe_01.jpg "Wireframe")
+Figur 3
 
 ### Programvare og Git Bash
 
@@ -41,7 +53,8 @@ Med prosjektet lagret lokalt, åpnet vi IntelliJ og åpnet mappen som et prosjek
 ## Gruppens “contributions” og “commits” i GitHub
 For å synliggjøre at hele gruppen har deltatt i gruppeoppgaven og skrevet kode, har vi hentet ut en skjermdump (figur 1) fra GitHub under “../graphs/contributors”. Skjermdumpen viser en graf og statistikk over antall “commits” og hvor mange kodelinjer som er lagt til og tatt bort av hvert gruppemedlem.
 
-![](media/contributions.png)
+![Alt](media/contributions.png "Screenshot av Contributions")
+Figur 4
 
 ## Viktige valg i utviklingsprosessen
 #### Styling med CSS:
@@ -62,11 +75,13 @@ Vi har utviklet nettsiden på GitHub Pages for å være responsiv i forhold til 
 
 For å oppnå det har vi aktivt brukt inspiseringsverktøyet i nettleseren. Det har vi gjort på følgende måte ved å høyre-klikke i skjermvinduet og velge “Inspiser elementer” og trykt på “Toggle Device Toolbar”. Der fikk vi opp mål om hvor mange piksler telefoner og ulike skjermer har i bredde.
 
-Ut ifra denne informasjonen har vi brukt CSS-standarden Media Query. I CSS definerte vi følgende: “@media only screen and (max-width: 375px) {}”.  Her forteller vi nettleseren at dersom bredden på skjermen er mindre enn eller lik 375 piksler, så skal en annen angitt stil være gjeldene. Ved å bruke Media Query kan vi sørge for at visittkortene vises ovenfor hverandre dersom oppløsningen på skjermen er for lav til å sidestille visittkortene (se eksempel i figur 2). Figur 3 viser hvordan nettsiden blir seende ut på en høyere oppløst skjerm.
+Ut ifra denne informasjonen har vi brukt CSS-standarden Media Query. I CSS definerte vi følgende: “@media only screen and (max-width: 375px) {}”.  Her forteller vi nettleseren at dersom bredden på skjermen er mindre enn eller lik 375 piksler, så skal en annen angitt stil være gjeldene. Ved å bruke Media Query kan vi sørge for at visittkortene vises ovenfor hverandre dersom oppløsningen på skjermen er for lav til å sidestille visittkortene (se eksempel i figur 5). Figur 6 viser hvordan nettsiden blir seende ut på en høyere oppløst skjerm.
 
-![](media/screenshot_01.png)
+![Alt](media/screenshot_02.png "Screenshot av eksempel på responsivt design - Mobil")
+Figur 5
 
-![](media/screenshot_02.png)
+![Alt](media/screenshot_01.png "Screenshot av eksempel på responsivt design - PC")
+Figur 6
 
 ## JavaScript, How-we-roll og HWR report 
 Koden som lager Form-elementene i how-we-roll.html og dataene som vises i hwr-report.html er satt opp med hensikt for å vise et dynamisk innhold. Vi har valgt å gjøre det på denne måten ettersom vi ikke har kontroll på den eksterne serveren som dataene lagres på. Vi har mulighet til å fremvise dataene statisk på siden hwr-report.html dersom vi hadde hardkodet spørringen i HTML-dokumentet.
@@ -78,17 +93,20 @@ Vi har utført en valideringssjekk av vår nettside ved å benytte W3 Schools si
 
 I figurene under kan man se hvordan “index.html”, how-we-roll.html og “hwr-report.html” valideres uten feiler eller advarsler.  
 
-![](media/w3vali.png)
+![Alt](media/w3vali.png "w3 validator screenshot01")
+Figur 7
 
-![](media/w3vali02.png)
+![Alt](media/w3vali02.png "w3 validator screenshot02")
+Figur 8
 
-![](media/w3vali03.png)
+![Alt](media/w3vali03.png "w3 validator screenshot03")
+Figur 9
 
 
 |Litteraturliste:|
 |----|
 |JavaScript-kodesnutter: Forelesningsnotater og Janis Gaillis.|
+|W3 Valideringsverktøy: https://validator.w3.org/|
 |W3 Schools: Eksempler på kodeløsninger i HTML og CSS.|
-|W3 Schools: Valideringsverktøy: https://validator.w3.org/|
 |W3 Schools: UTF-8: https://www.w3schools.com/charsets/ref_html_utf8.asp (sjekket 2021/10/08).|
 |W3 Schools. Eget stilark: https://www.w3schools.com/html/html_css.asp |
