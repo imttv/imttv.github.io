@@ -7,9 +7,7 @@ p {
     font-size: 16px;
     padding: 15px;
 }
-a, a:visited {
-    text-decoration: none;
-}
+a, a:visited {text-decoration: none;}
 #ramme {
     width:350px;
     height:600px;
