@@ -1,0 +1,116 @@
+body {
+    margin:0;
+    background: #ececec;
+    font-family: Helvetica, Verdana, Sans-Serif;
+}
+p {
+    font-size: 16px;
+    padding: 15px;
+}
+a, a:visited {
+    text-decoration: none;
+}
+#ramme {
+    width:350px;
+    height:600px;
+    display: block;
+    display: block;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.header {
+    background-image:url(./media/nexus5-blank-top.png);
+    background-position: center;
+    background-size: cover;
+    width: 358px;
+    height: 55px;
+    margin-bottom: 0;
+    margin-left: -4px;
+}
+.innhold {
+    background: #fff;
+    border-left: 4px #595959 solid;
+    border-right: 4px #595959 solid;
+    margin: 0;
+    padding: 5px;
+    min-height: 540px;
+    color: #000;
+}
+.innhold h1 {
+    text-align: center;
+    font-size: 40px;
+    color: #d55051;
+    padding-bottom: 20px;
+}
+.innhold h2 {
+    text-align: center;
+    font-size: 30px;
+    color: #d55051;
+    padding-bottom: 20px;
+}
+.innhold p {
+    text-align: center;
+    font-weight: bold;
+    padding-bottom: 40px;
+}
+.navigering {margin-top: 20px;}
+.navigering a, .navigering a:visited {
+    font-size: 30px;
+    margin-left: 20px;
+    color: #d55051;
+}
+.kategori {margin-bottom: 30px;}
+.kategori a, .kategori a:visited {
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-size: 24px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: #3a3a3a;
+    margin-bottom: 2px;
+    background: #d7d7d7;
+}
+.kategori a:hover {background: #eee;}
+.bunn {
+    background-image:url(./media/nexus5-blank-bunn.png);
+    background-position: center;
+    background-size: cover;
+    width: 358px;
+    height: 70px;
+    margin-top: 0;
+    margin-left: -4px;
+}
+.knapp {
+    background: #c57b7c;
+    color: #fff;
+    width: 100%;
+    height: 40px;
+    text-align: center;
+    font-size: 20px;
+    padding-top: 14px;
+    margin-bottom: 2px;
+}
+.knapp2 {
+    background: #6a6a6a;
+    color: #fff;
+    width: 100%;
+    height: 40px;
+    text-align: center;
+    font-size: 20px;
+    padding-top: 14px;
+    margin-bottom: 2px;
+}
+.sentrering {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    max-width: 100%;
+}
+.fet {
+    font-weight: bold;
+    color: #d55051;
+    font-size: 20px;
+}
