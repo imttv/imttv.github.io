@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>How We Roll Report 9B</title>
+    <style>
+/* -- Font som blir brukt i Navbar -- */
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+
+/* -- Definerer design på hele body design -- */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+/* -- Navbar design -- */
+        .navbar h2 {
+            display: inline-block;
+            color: white;
+            font-size: 30px;
+            margin-left: 25px;
+            font-family: 'Roboto', sans-serif;
+        }
+        .navbar {
+            margin: 0;
+            font-size: 25px;
+            background-color: #333;
+            font-family: 'Roboto', sans-serif;
+            width: 100%;
+        }
+        ul {
+            float: right;
+            margin-right: 25px;
+        }
+        ul li {
+            display: inline-block;
+            margin-bottom: 5px;
+            margin-top: 5px;
+        }
+        ul li a {
+            text-decoration: none;
+            color: white;
+            margin-right: 25px;
+        }
+        ul li a:hover {
+            color: #bbfcff;
+            transition: 0.25s;
+        }
+        ul li a.active {
+            border-bottom: 1px solid #fff;
+            padding-bottom: 1px;
+        }
+
+/* -- Gjør hjemmesiden responsive -- */
+    @media only screen and (max-width: 1000px) {
+        .navbar h2 {
+            color: white;
+            font-size: 30px;
+            font-family: 'Roboto', sans-serif;
+        }
+        .navbar {
+            margin: 0;
+            font-size: 25px;
+            background-color: #333333;
+            font-family: 'Roboto', sans-serif;
+            width: auto;
+            min-width: 500px;
+            text-align: center;
+            padding-bottom: 10px;
+        }
+
+        ul {
+            float: none;
+        }
+
+        ul li {
+            display: inline-block;
+        }
+
+        ul li a {
+            text-decoration: none;
+            margin-right: 15px;
+        }
+    }
+
+/* --------- Design av "Visualiser" knapp --------- */
+        #btnData {
+            background-color: #404c51;
+            border: none;
+            color: #fff;
+            padding: 10px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 14px;
+            border-radius: 25px;
+            margin-bottom: 10px;
+        }
+
+        #btnData:hover {opacity: 0.8;}
+
+        #btnData:active {transform: translateY(1px);}
+
+/* -- Design av visualiseringen av data -- */
+        .data {
+            text-align: center;
+            border: 2px solid black;
+            margin: auto;
+            margin-top: 5%;
+            width: 50%;
+            padding: 10px;
+        }
+        .data2 {
+            display: none;
+        }
+
+  </style>
+ </head>
+<body>
+
+<!-- Navbar -->
+    <section class="navbar">
+        <h2>UiA | Gruppe 9b</h2>
+        <ul>
+            <li><a href="https://github.com/imttv/imttv.github.io#how-we-roll" target="_blank">Github</a></li>
+            <li><a href="../index.html">Visittkort</a></li>
+            <li><a href="how-we-roll.html">How We Roll</a></li>
+            <li><a class="active" href="hwr-report.html">HWR Report</a></li>
+        </ul>
+    </section>
+
+<!-- Visuelle av data -->
+    <section class="data">
+        <p></p>
+        Lim inn id: <input type="text" value="" id="timetrxidPASTE" style="width: 400px">
+        <div class="results" id="results">
+            <h2>Data:</h2>
+            <pre class="data2"></pre>
+            <input type="button" id="btnData" value="Visualiser">
+        </div>
+
+        <div id="debug"></div>
+        <canvas id="report" width="500"></canvas>
+
+</section>
+
+<!-- Script -->
+<script>
+
+<!-- DataID-Innfelt -->
+    var timetrxidPASTE=document.getElementById("timetrxidPASTE");
+    var btnData=document.getElementById("btnData");
+    var canvas = document.getElementById('report');
+    var context = canvas.getContext('2d');
+    const results = document.querySelector('.results pre');
+
+<!-- Tegning av info i canvas  -->
+    context.font = '14px serif';
+    context.fillText('Introvert', 10, 24);
+    context.fillText('Ekstrovert', 210, 24);
+
+    context.fillText('Jostein', 410, 24,);
+    context.fillText('Michael', 410, 44,);
+    context.fillText('Hans Christian', 410, 64,);
+    context.fillText('Daniel', 410, 84,);
+
+    context.fillText('Jobbe fysisk', 10, 74);
+    context.fillText('Jobbe digitalt', 210, 74);
+
+    context.beginPath();
+    context.moveTo(100, 20);
+    context.lineTo(200, 20);
+    context.stroke();
+
+    context.beginPath();
+    context.moveTo(100, 70);
+    context.lineTo(200, 70);
+    context.stroke();
+
+    var X = 400;
+    var Y = 20;
+    var R = 4;
+    context.beginPath();
+    context.arc(X, Y, R, 0, 2 * Math.PI, false);
+    context.fillStyle = "red";
+    context.fill();
+    context.lineWidth = 1;
+    context.strokeStyle = "black";
+    context.stroke();
+    context.closePath();
+
+    var X = 400;
+    var Y = 40;
+    var R = 4;
+    context.beginPath();
+    context.arc(X, Y, R, 0, 2 * Math.PI, false);
+    context.fillStyle = "pink";
+    context.fill();
+    context.lineWidth = 1;
+    context.strokeStyle = "black";
+    context.stroke();
+    context.closePath();
+
+    var X = 400;
+    var Y = 60;
+    var R = 4;
+    context.beginPath();
+    context.arc(X, Y, R, 0, 2 * Math.PI, false);
+    context.fillStyle = "orange";
+    context.fill();
+    context.lineWidth = 1;
+    context.strokeStyle = "black";
+    context.stroke();
+    context.closePath();
+
+    var X = 400;
+    var Y = 80;
+    var R = 4;
+    context.beginPath();
+    context.arc(X, Y, R, 0, 2 * Math.PI, false);
+    context.fillStyle = "blue";
+    context.fill();
+    context.lineWidth = 1;
+    context.strokeStyle = "black";
+    context.stroke();
+    context.closePath();
+
+
+
+<!-- Innsamling av eldre data -->
+
+<!-- Josteins data -->
+fetch("https://bacit.info/hwr/20211010181809-417b2138c73b82ab517b21bfe85f9a25.json", {cache: 'no-cache'})
+    .then(response => response.json())
+    .then(data => {
+        console.log(data);
+
+        var X = 400;
+        var Y = 20;
+        var R = 4;
+        context.beginPath();
+        context.arc(X, Y, R, 0, 2 * Math.PI, false);
+        context.fillStyle = "red";
+        context.fill();
+        context.lineWidth = 1;
+        context.strokeStyle = "black";
+        context.stroke();
+        context.closePath();
+
+        var X = 100 + parseInt(data.iore, 10);
+        var Y = 20;
+        var R = 4;
+        context.beginPath();
+        context.arc(X, Y, R, 0, 2 * Math.PI, false);
+        context.fillStyle = "red";
+        context.fill();
+        context.lineWidth = 1;
+        context.strokeStyle = "black";
+        context.stroke();
+        context.closePath();
+
+        var X = 100 + parseInt(data.ford, 10);
+        var Y = 70;
+        var R = 4;
+        context.beginPath();
+        context.arc(X, Y, R, 0, 2 * Math.PI, false);
+        context.fillStyle = "red";
+        context.fill();
+        context.lineWidth = 1;
+        context.strokeStyle = "black";
+        context.stroke();
+        context.closePath();
+    });
+
+<!-- Michaels data -->
+fetch("https://bacit.info/hwr/20211010181744-fcda8bb9534fe6caa784263ff8130d65.json", {cache: 'no-cache'})
+    .then(response => response.json())
+    .then(data => {
+        console.log(data);
+
+        var X = 100 + parseInt(data.iore, 10);
+        var Y = 20;
+        var R = 4;
+        context.beginPath();
+        context.arc(X, Y, R, 0, 2 * Math.PI, false);
+        context.fillStyle = "pink";
+        context.fill();
+        context.lineWidth = 1;
+        context.strokeStyle = "black";
+        context.stroke();
+        context.closePath();
+
+        var X = 100 + parseInt(data.ford, 10);
+        var Y = 70;
+        var R = 4;
+        context.beginPath();
+        context.arc(X, Y, R, 0, 2 * Math.PI, false);
+        context.fillStyle = "pink";
+        context.fill();
+        context.lineWidth = 1;
+        context.strokeStyle = "black";
+        context.stroke();
+        context.closePath();
+    });
+
+<!-- HCs data -->
+fetch("https://bacit.info/hwr/20211010181716-63501b7138041b5b110f803ddffa3348.json", {cache: 'no-cache'})
+    .then(response => response.json())
+    .then(data => {
+        console.log(data);
+
+        var X = 100 + parseInt(data.iore, 10);
+        var Y = 20;
+        var R = 4;
+        context.beginPath();
+        context.arc(X, Y, R, 0, 2 * Math.PI, false);
+        context.fillStyle = "orange";
+        context.fill();
+        context.lineWidth = 1;
+        context.strokeStyle = "black";
+        context.stroke();
+        context.closePath();
+
+        var X = 100 + parseInt(data.ford, 10);
+        var Y = 70;
+        var R = 4;
+        context.beginPath();
+        context.arc(X, Y, R, 0, 2 * Math.PI, false);
+        context.fillStyle = "orange";
+        context.fill();
+        context.lineWidth = 1;
+        context.strokeStyle = "black";
+        context.stroke();
+        context.closePath();
+    });
+
+<!-- Daniels data -->
+fetch("https://bacit.info/hwr/20211010181642-0f43a4adac16f0b870e05f186d1dba40.json", {cache: 'no-cache'})
+    .then(response => response.json())
+    .then(data => {
+        console.log(data);
+
+        var X = 100 + parseInt(data.iore, 10);
+        var Y = 20;
+        var R = 4;
+        context.beginPath();
+        context.arc(X, Y, R, 0, 2 * Math.PI, false);
+        context.fillStyle = "blue";
+        context.fill();
+        context.lineWidth = 1;
+        context.strokeStyle = "black";
+        context.stroke();
+        context.closePath();
+
+        var X = 100 + parseInt(data.ford, 10);
+        var Y = 70;
+        var R = 4;
+        context.beginPath();
+        context.arc(X, Y, R, 0, 2 * Math.PI, false);
+        context.fillStyle = "blue";
+        context.fill();
+        context.lineWidth = 1;
+        context.strokeStyle = "black";
+        context.stroke();
+        context.closePath();
+    });
+
+
+<!-- Innsamling av ny data -->
+
+    btnData.onclick=function () {
+<!-- Ny data -->
+        fetch("https://bacit.info/hwr/" + timetrxidPASTE.value + ".json", {cache: 'no-cache'})
+            .then(response => response.json())
+            .then(data => {
+                console.log(data);
+                results.innerText = JSON.stringify(data, null, 2);
+                document.querySelector("#debug").innerText = "Fornavn: " + data.navn + "\nGruppe: " + data.gruppe + "\nAlder: " + data.alder;
+
+                context.fillStyle = "black";
+                context.fillText(data.navn, 410, 104,);
+                var X = 400;
+                var Y = 100;
+                var R = 4;
+                context.beginPath();
+                context.arc(X, Y, R, 0, 2 * Math.PI, false);
+                context.fillStyle = "lightgreen";
+                context.fill();
+                context.lineWidth = 1;
+                context.strokeStyle = "black";
+                context.stroke();
+                context.closePath();
+
+                var X = 100 + parseInt(data.iore, 10);
+                var Y = 20;
+                var R = 4;
+                context.beginPath();
+                context.arc(X, Y, R, 0, 2 * Math.PI, false);
+                context.fillStyle = "lightgreen";
+                context.fill();
+                context.lineWidth = 1;
+                context.strokeStyle = "black";
+                context.stroke();
+                context.closePath();
+
+                var X = 100 + parseInt(data.ford, 10);
+                var Y = 70;
+                var R = 4;
+                context.beginPath();
+                context.arc(X, Y, R, 0, 2 * Math.PI, false);
+                context.fillStyle = "lightgreen";
+                context.fill();
+                context.lineWidth = 1;
+                context.strokeStyle = "black";
+                context.stroke();
+                context.closePath();
+            });
+    }
+  </script>
+ </body>
+</html>

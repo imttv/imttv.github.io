@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>How We Roll 9B</title>
+    <style>
+/* --------- Font som blir brukt i Navbar --------- */
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+
+/* --------- Design av slider --------- */
+        .slider {
+            -webkit-appearance: none;
+            width: 25%;
+            height: 15px;
+            background: #d3d3d3;
+            outline: none;
+            opacity: 0.7;
+            -webkit-transition: .2s;
+            transition: opacity .2s;
+        }
+
+        .slider:hover {opacity: 1;}
+
+        .slider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 25px;
+            height: 25px;
+            background: #404c51;
+            cursor: pointer;
+        }
+
+/* --------- Design av "Lagre" knapp --------- */
+        button {
+            background-color: #404c51;
+            border: none;
+            color: #fff;
+            padding: 10px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            border-radius: 25px;
+        }
+
+        button:hover {opacity: 0.8;}
+
+        button:active {transform: translateY(1px);}
+
+        form {
+            text-align: center;
+        }
+
+        .results {
+            text-align: center;
+            margin-top: 7em;
+            display: none;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+        }
+
+/* --------- Navbar design --------- */
+        .navbar h2 {
+            display: inline-block;
+            color: white;
+            font-size: 30px;
+            margin-left: 25px;
+            font-family: 'Roboto', sans-serif;
+        }
+        .navbar {
+            margin: 0;
+            font-size: 25px;
+            background-color: #333;
+            font-family: 'Roboto', sans-serif;
+            width: 100%;
+
+        }
+        ul {
+            float: right;
+            margin-right: 25px;
+        }
+        ul li {
+            display: inline-block;
+            margin-bottom: 5px;
+            margin-top: 5px;
+        }
+        ul li a {
+            text-decoration: none;
+            color: white;
+            margin-right: 25px;
+        }
+        ul li a:hover {
+            color: #bbfcff;
+            transition: 0.25s;
+        }
+        ul li a.active {
+            border-bottom: 1px solid #fff;
+            padding-bottom: 1px;
+        }
+
+/* --------- Gjør hjemmesiden responsive --------- */
+    @media only screen and (max-width: 1000px) {
+        .navbar h2 {
+            color: white;
+            font-size: 30px;
+            font-family: 'Roboto', sans-serif;
+        }
+        .navbar {
+            margin: 0;
+            font-size: 25px;
+            background-color: #333333;
+            font-family: 'Roboto', sans-serif;
+            width: auto;
+            min-width: 500px;
+            text-align: center;
+            padding-bottom: 10px;
+        }
+
+        ul {
+            float: none;
+        }
+
+        ul li {
+            display: inline-block;
+            margin-bottom: 5px;
+            margin-top: 5px;
+        }
+
+        ul li a {
+            text-decoration: none;
+            margin-right: 15px;
+        }
+    }
+
+/* -- Design av data ID felt -- */
+        .id {
+            text-align: center;
+            margin-top: 2%;
+        }
+
+/* -- Design av overskrift/Data innfelt "Fyll inn informasjon" -- */
+        .form {
+            margin-top: 5%;
+        }
+        .form h2 {
+            text-align: center;
+        }
+
+  </style>
+ </head>
+<body>
+
+<!-- Navbar -->
+        <section class="navbar">
+            <h2>UiA | Gruppe 9b</h2>
+            <ul>
+                <li><a href="https://github.com/imttv/imttv.github.io#how-we-roll" target="_blank">Github</a></li>
+                <li><a href="../index.html">Visittkort</a></li>
+                <li><a class="active" href="how-we-roll.html">How We Roll</a></li>
+                <li><a href="hwr-report.html">HWR Report</a></li>
+            </ul>
+        </section>
+
+<!-- Visuelle av data innfelt -->
+<section class="form">
+    <h2>Fyll inn informasjon</h2>
+    <form>
+        <p><label for="data01">Navn</label>
+            <input type="text" name="navn" id="data01" /></p>
+
+        <p><label for="data02">Gruppe</label>
+            <input type="text" name="gruppe" id="data02" /></p>
+
+        <p>HowWeRoll-parametre:</p>
+
+        <div class="slidecontainer">
+            <p>
+                <!-- iore - introvert or ekstrovert -->
+                <label for="iore">Introvert</label>
+                <input type="range" id="iore" name="iore" value="50" class="slider">
+                <label for="iore">Ekstrovert</label>
+            </p>
+
+            <p>
+                <!-- ford - fysisk or digitalt -->
+                <label for="ford">Jobbe fysisk</label>
+                <input type="range" id="ford" name="ford" value="50" class="slider">
+                <label for="ford">Jobbe digitalt</label>
+            </p>
+        </div>
+
+        <p>
+            <label>Alder:
+                <input type="number" name="alder" id="alder" max="100" min="10">
+            </label>
+        </p>
+
+        <button type="submit" id="btnLagre">Lagre</button>
+    </form>
+</section>
+
+<!-- Visuelle av data ID -->
+        <div class="id">
+            Kopier id: <input type="text" value="timetrxid" id="timetrxidCOPY" style="width: 400px">
+        </div>
+
+        <div class="results">
+            <h2>Form Data</h2>
+            <pre></pre>
+        </div>
+
+
+<!-- Script -->
+
+<script>
+<!-- Lagring-av-data -->
+    var timetrxidCOPY=document.getElementById("timetrxidCOPY");
+    var btnLagre=document.getElementById("btnLagre");
+
+    timetrxidCOPY.hidden=true;
+
+    btnLagre.onclick=function (){
+        timetrxidCOPY.hidden=false;
+    }
+
+<!-- Kode fra Janis -->
+    // From https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch (seen 2021-09-27)
+    // Example POST method implementation using fetch:
+    async function postData(url = '', data = {}) {
+        // Default options are marked with *
+        const response = await fetch(url, {
+            method: 'POST', // *GET, POST, PUT, DELETE, etc.
+            mode: 'cors', // no-cors, *cors, same-origin
+            cache: 'no-cache', // *default, no-cache, reload, force-cache,only-if-cached
+            credentials: 'same-origin', // include, *same-origin, omit
+            headers: {
+                'Content-Type': 'application/json',
+                // 'Content-Type': 'application/x-www-form-urlencoded',
+            },
+            redirect: 'follow', // manual, *follow, error
+            referrerPolicy: 'no-referrer', // no-referrer,*no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
+            body: JSON.stringify(data) // body data type must match"Content-Type"header
+        });
+        return response.json(); // parses JSON response into native JavaScriptobjects
+    }
+
+    function handleSubmit(event) {
+        event.preventDefault();
+        const data = new FormData(event.target);
+        const formJSON = Object.fromEntries(data.entries());
+        const results = document.querySelector('.results pre');
+        postData('https://bacit.info/', formJSON)
+            .then(data => {
+                results.innerText = JSON.stringify(data, null, 2);
+                timetrxidCOPY.value=data.time+"-"+data.trxid;
+            });
+    }
+    const form = document.querySelector('form');
+    form.addEventListener('submit', handleSubmit);
+</script>
+</body>
+</html>
