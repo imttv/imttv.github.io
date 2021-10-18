@@ -7,7 +7,9 @@ p {
     font-size: 16px;
     padding: 15px;
 }
-a, a:visited {text-decoration: none;}
+a, a:visited {
+    text-decoration: none;
+}
 #ramme {
     width:350px;
     height:600px;
@@ -51,13 +53,17 @@ a, a:visited {text-decoration: none;}
     font-weight: bold;
     padding-bottom: 40px;
 }
-.navigering {margin-top: 20px;}
+.navigering {
+    margin-top: 20px;
+}
 .navigering a, .navigering a:visited {
     font-size: 30px;
     margin-left: 20px;
     color: #d55051;
 }
-.kategori {margin-bottom: 30px;}
+.kategori {
+    margin-bottom: 30px;
+}
 .kategori a, .kategori a:visited {
     display: block;
     width: 100%;
@@ -69,7 +75,9 @@ a, a:visited {text-decoration: none;}
     margin-bottom: 2px;
     background: #d7d7d7;
 }
-.kategori a:hover {background: #eee;}
+.kategori a:hover {
+    background: #eee;
+}
 .bunn {
     background-image:url(./media/nexus5-blank-bunn.png);
     background-position: center;
