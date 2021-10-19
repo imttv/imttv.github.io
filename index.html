@@ -1,337 +1,73 @@
-    <!DOCTYPE html>
-    <html lang="nb">
-    <head>
+<!DOCTYPE html>
+<html lang="nb">
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Visittkort for gruppe 9b</title>
+    <title>Gruppe9b</title>
     <style>
-/* -- Font som blir brukt i Navbar -- */
-        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
-
-/* -- Bakgrunnsbilde, og helhetlig design i body element -- */
+        /* -- Design for hele body -- */
         body {
-            background-image: url("https://i.imgur.com/c3MXPRT.jpg");
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            background-size: cover;
             margin: 0;
+            background-color: #333;
         }
-
-/* -- Hovedkontainer for visittkort innhold -- */
-        a, a:hover, a:visited {
+        /* -- Navbar design -- */
+        .navbar a {
+            text-decoration: none;
         }
-        #hovedkontainer {
-            position: absolute;
-            top: 25%;
-            left: 0;
-            right:0;
-            min-height: 550px;
-        }
-        .sentrering {
-            display: flex;
-            justify-content: center;
-        }
-
-/* -- Visittkort knapp -- */
-        .visittkort:hover {
-            color: #bbfcff;
-            transform: scale(1.2);
-            transition: transform .3s;
-            border: 3px solid #bbfcff;
-        }
-        .visittkort {
-            color: #fff;
-            padding: 10px;
-            font-size: 45px;
-            font-family: Arial, sans-serif;
-            border: 3px solid #fff;
-            margin: 0;
-            position: absolute;
-            right: 25%;
-            left: 25%;
-            text-align: center;
-            cursor: pointer;
-        }
-
-/* -- Design av visittkort -- */
-        .kort img {
-            display: block;
-            float:right;
-            height: 100px;
-            width: 100px;
-        }
-        .kort h1 {
-            font-size: 24px;
-            display:block;
-            float:left;
-            margin-top: 70px;
-        }
-        #rekke {
-            margin-top: 80px;
-        }
-        .kort p {
-            display:block;
-            float:left;
-            font-size: 18px;
-            line-height: 26px;
-        }
-        .kort {
-            float: left;
-            color: #fff;
-            padding: 25px;
-            height: 550px;
-            width: 300px;
-            margin-right: 0;
-            margin-top: 20px;
-            font-family: Arial, sans-serif;
-            font-size: 20px;
-            animation-name: skyvinn;
-            animation-duration: 1s;
-            animation-timing-function: ease;
-            border: 1px solid #ccc;
-            word-wrap: normal;
-            overflow: hidden;
-            background: #333;
-        }
-
-/* -- Visittkort animasjon -- */
-        @keyframes skyvned {
-            0%   {margin-top:100px;}
-            100% {margin-top:20px;}
-        }
-        @keyframes skyvinn {
-            0%   {margin-left:100px;}
-            100% {margin-left:0;}
-        }
-
-/* -- Navbar design -- */
         .navbar h2 {
-            display: inline-block;
-            color: white;
-            font-size: 30px;
-            margin-left: 25px;
+            text-align: center;
+            color: #d2002d;
+            font-size: 50px;
             font-family: 'Roboto', sans-serif;
+            padding-top: 10%;
         }
         .navbar {
+            text-align: center;
             margin: 0;
-            font-size: 25px;
-            background-color: #333;
+            font-size: 20px;
             font-family: 'Roboto', sans-serif;
             width: 100%;
         }
         ul {
-            float: right;
-            margin-right: 25px;
         }
         ul li {
             display: inline-block;
             margin-bottom: 5px;
             margin-top: 5px;
+            margin-right: 20px;
         }
         ul li a {
             text-decoration: none;
-            margin-right: 25px;
-            color: white;
+            color: #fff;
         }
         ul li a:hover {
-            color: #bbfcff;
+            color: #d2002d;
             transition: 0.25s;
         }
-        ul li a.active {
-            border-bottom: 1px solid #fff;
-            padding-bottom: 1px;
-        }
-
-/* -- Gjør hjemmesiden responsiv -- */
-             @media only screen and (max-width: 1000px) {
-            .navbar h2 {
-                margin-left: 0;
-                margin-bottom: 0;
-                color: white;
-                font-size: 30px;
-                font-family: 'Roboto', sans-serif;
-            }
-            .navbar {
-                margin: 0;
-                font-size: 25px;
-                background-color: #333333;
-                font-family: 'Roboto', sans-serif;
-                width: auto;
-                min-width: 500px;
-                text-align: center;
-                padding-bottom: 10px;
-            }
-
-            ul {
-                margin-right: 0;
-                float: none;
-            }
-
-            ul li {
-                display: inline-block;
-            }
-
-            ul li a {
-                text-decoration: none;
-                margin-right: 15px;
-            }
-
-            .visittkort {
-                color: #fff;
-                padding: 10px;
-                font-size: 20px;
-                font-family: Arial, sans-serif;
-                border: 1px solid #fff;
-                margin: 0;
-                position: absolute;
-                right: 25%;
-                left: 25%;
-                text-align: center;
-            }
-
-            .visittkort:hover {
-                color: #ffffff;
-                transform: scale(1);
-                transition: transform .0s;
-                border: 1px solid #ffffff;
-            }
-
-            #hovedkontainer {
-                position: absolute;
-                top: 20%;
-                left: 0;
-                right: 0;
-                bottom: 0;
-                margin: auto;
-                width: 500px;
-                height: 100px;
-                cursor: pointer;
-            }
-
-            .kort {
-                float: unset;
-                color: #ffffff;
-                padding: 25px;
-                height: 350px;
-                width: auto;
-                min-width: 400px;
-                margin-right: 0;
-                margin-top: 0;
-                font-family: Arial, sans-serif;
-                font-size: 20px;
-                animation-name: skyvinn;
-                animation-duration: 1s;
-                animation-timing-function: ease;
-                border: 1px solid #ccc;
-                word-wrap: normal;
-                overflow: hidden;
-                background: #333;
-            }
-
-            .sentrering {
-                display: block !important;
-                justify-content: center;
-            }
-            @keyframes skyvinn {
-            0%   {margin-bottom:100px;}
-            100% {margin-bottom:0;}
-            }
-        }
-        @media only screen and (max-width: 360px) {
-            #hovedkontainer {
-                position: absolute;
-                top: 35%;
-                left: 0;
-                right: 0;
-                bottom: 0;
-                margin: auto;
-                width: 500px;
-                height: 100px;
-            }
-        }
-             @media only screen and (max-width: 375px) {
-                 #hovedkontainer {
-                     position: absolute;
-                     top: 60%;
-                     left: 0;
-                     right: 0;
-                     bottom: 0;
-                     margin: auto;
-                     width: 500px;
-                     height: 100px;
-             }
+        /* -- UIA Logo -- */
+        .UIA-Logo {
+            text-align: center;
+            float: bottom;
+            padding-top: 100px;
         }
     </style>
-    </head>
+</head>
 <body>
 
 <!-- Navbar -->
-
 <section class="navbar">
-    <h2>UiA | Gruppe 9b</h2>
+    <a href="index.html"><h2>UiA | Gruppe 9b</h2></a>
     <ul>
         <li><a href="https://github.com/imttv/imttv.github.io#how-we-roll" target="_blank">Github</a></li>
-        <li><a class="active" href="index.html">Visittkort</a></li>
-        <li><a href="./HWR/how-we-roll.html">How We Roll</a></li>
-        <li><a href="./HWR/hwr-report.html">HWR Report</a></li>
-        <li><a href="./demo_is_104/index.html">Demo Eventum</a></li>
+        <li><a href="./HWR/visittkort.html" target="_blank">HowWeRoll</a></li>
+        <li><a href="./demo_is_104/index.html" target="_blank">Demo</a></li>
     </ul>
 </section>
 
-<!-- Hovedkontainer som samler alt innhold på siden i et rammeverk -->
-    <div id="hovedkontainer">
-
-        <div class="visittkort" id="visittkort"> <!-- Visittkort knappen -->
-            Visittkort for gruppe 9B
-        </div>
-
-    <div id="rekke"> <!-- Kontainer for å samle klasser -->
-        <div class="sentrering"> <!-- klassen sentrerer visittkortene -->
-            <div class="kort"> <!-- Klasse for visittkort -->
-                <h1>Jostein</h1>
-                <img src="./HWR/media/4.PNG" alt="Bilde av Jostein" title="Bilde av Jostein" />
-                <p>... er fra Bergen. Fullført videregående utdanning innenfor medier og kommunikasjon, og kan bidra med erfaring innenfor design. Jostein liker å bli utfordret innen data, og har hatt en interesse innenfor teknologi og dataspill hele livet. Tidligere jobbet for Ryde Technology, og Posten Norge AS. Jostein er en utadvendt og inkluderende person, som fungerer rolig, og profesjonelt under press.</p>
-            </div>
-            <div class="kort">
-                <h1>Michael</h1>
-                <img src="./HWR/media/1.jpg" alt="Bilde av Michael" title="Bilde av Michael"/>
-                <p>... er entusiastisk IT student på 26 år fra Horten. Som fersk IT student med en tidligere fullført bachelor grad innen interaktiv media & design – spillutvikling og en stor IT interesse, er Michael klar for nye utfordringer og lærdom.
-
-                    Med kreativitet, flittig feilsøkings kunnskap og leder innstilling, står Michael klar til å takle nye oppgaver og søke ny lærdom i tiden som kommer.</p>
-            </div>
-            <div class="kort">
-                <h1>Hans Christian</h1>
-                <img src="./HWR/media/3.jpg" alt="Bilde av Hans Christian" title="Bilde av Hans Christian" />
-                <p> ... er fra Kristiansand. Han er ny som student på UIA, og er motivert og positivt innstilt for studiet sitt. På studiespesialisering ved Vågsbygd VGS gjennomførte han valgfagene IT1 og IT2. Som en følge har han fått grunnleggende kunnskap og ferdigheter innenfor kodespråkene HTML, CSS og JavaScript. Hans Christian har også kompetanse innenfor hardware ettersom at han har bygget og oppgradert egen stasjonær PC. Han er glad i samarbeid, kommunikasjon og problemløsning.</p>
-            </div>
-            <div class="kort">
-                <h1>Daniel</h1>
-                <img src="./HWR/media/2.jpg" alt="Bilde av Daniel" title="Bilde av Daniel" />
-                <p>... har bakgrunn fra tidligere IT-studier ved UiA i Grimstad, hvor han har tatt emner innen webpublisering, objektorientert programmering og datateknikk. Hovedfokuset lå på HTML, CSS og Java. Personlig har han en stor interesse for informasjonsteknologi, nettverkstopologi og hardware. Daniel har kompetanse på drift og oppsett av serverstack og nettverk, og ønsker å bruke sine kunnskaper til å bidra til at gruppen gjør det bra gjennom semesteret.
-                </p>
-            </div>
-        </div>
-    </div>
-</div>
-
-<script>
-    <!-- Gjør at visittkortene vises. Variabelen n er der for at knappen skal være en toggle knapp. -->
-    visittkort=document.getElementById("visittkort");
-    rekke=document.getElementById("rekke");
-
-    rekke.hidden=true;
-
-    n=0;
-
-    visittkort.onclick=function (){
-        n++;
-        rekke.hidden=true;
-        if (n==1){
-            n=-1;
-            rekke.hidden=false;
-        }
-    }
-</script>
+<!-- UIA Logo -->
+<section class="UIA-Logo">
+    <img src="https://i.imgur.com/SPDBRXo.png" width = "250" height = "auto" alt="Uia Logo">
+</section>
 
 </body>
 </html>
