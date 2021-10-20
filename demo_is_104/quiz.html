@@ -19,11 +19,17 @@
     <p>Velg en av arrangørene under:</p>
     <div class="kategori">
       <a href="systematicus.html">Systematicus</a>
-      <a href="">UiA fadderne</a>
+      <a href="" onclick="feilmelding()">UiA fadderne</a>
+      <p id="feilmelding"></p>
     </div>
   </div>
 
   <div class="bunn"></div>
 </div>
+<script>
+  function feilmelding() {
+    document.getElementById("feilmelding").innerHTML = "UiA fadderne har ikke lagt ut noen quiz";
+  }
+</script>
 </body>
 </html>
