@@ -22,6 +22,7 @@ form input {
     margin-left: auto;
     margin-right: auto;
 }
+#feilmelding {color: #d55051;}
 .header {
     background-image:url(./media/nexus5-blank-top.png);
     background-position: center;
