@@ -5,10 +5,14 @@ body {
 }
 p {
     font-size: 16px;
-    padding: 15px;
+    padding: 0 15px 0 15px;
 }
-a, a:visited {
-    text-decoration: none;
+a, a:visited {text-decoration: none;}
+form input {
+    height: 50px;
+    width: 300px;
+    font-size: 20px;
+    text-align: center;
 }
 #ramme {
     width:350px;
@@ -48,22 +52,24 @@ a, a:visited {
     color: #d55051;
     padding-bottom: 20px;
 }
+.innhold h3 {
+    font-size: 25px;
+    text-align: center;
+    color: #d55051;
+    padding-bottom: 10px;
+}
 .innhold p {
     text-align: center;
     font-weight: bold;
-    padding-bottom: 40px;
+    padding-bottom: 20px;
 }
-.navigering {
-    margin-top: 20px;
-}
+.navigering {margin-top: 20px;}
 .navigering a, .navigering a:visited {
     font-size: 30px;
     margin-left: 20px;
     color: #d55051;
 }
-.kategori {
-    margin-bottom: 30px;
-}
+.kategori {margin-bottom: 30px;}
 .kategori a, .kategori a:visited {
     display: block;
     width: 100%;
@@ -75,9 +81,7 @@ a, a:visited {
     margin-bottom: 2px;
     background: #d7d7d7;
 }
-.kategori a:hover {
-    background: #eee;
-}
+.kategori a:hover {background: #eee;}
 .bunn {
     background-image:url(./media/nexus5-blank-bunn.png);
     background-position: center;
@@ -107,6 +111,30 @@ a, a:visited {
     padding-top: 14px;
     margin-bottom: 2px;
 }
+.knappliten {
+    background: #c57b7c;
+    color: #fff;
+    width: 90%;
+    height: 30px;
+    text-align: center;
+    font-size: 18px;
+    padding-top: 10px;
+    margin-bottom: 2px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.knappliten2 {
+    background: #6a6a6a;
+    color: #fff;
+    width: 90%;
+    height: 30px;
+    text-align: center;
+    font-size: 18px;
+    padding-top: 10px;
+    margin-bottom: 2px;
+    margin-left: auto;
+    margin-right: auto;
+}
 .sentrering {
     display: block;
     margin-left: auto;
@@ -118,4 +146,10 @@ a, a:visited {
     font-weight: bold;
     color: #d55051;
     font-size: 20px;
+}
+.mellomrom {margin: 20px 0 20px 0;}
+.pameldinger {
+    border-bottom: 4px #d55051 solid;
+    border-top: 4px #f55051 solid;
+    padding-bottom: 20px;
 }
