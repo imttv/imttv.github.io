@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <title>Eventum demo</title>
+    <link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+<body>
+
+
+<div id="ramme" >
+    <div class="header"></div>
+    <div class="innhold">
+        <div class="navigering">
+            <a href="kategorier.html">&#10092;</a>
+        </div>
+        <h3>Systematicus Quizkveld</h3>
+        <p>Quizkveld 19.august kl. 18 på Østsia.</p>
+        <img class="sentrering" src="./media/handicap_og_deltakere.jpg" />
+        <a href="delta.html"><div class="knappliten">
+            Trykk for å delta
+        </div></a>
+        <a href="info.html"><div class="knappliten">
+            Mer info
+        </div></a>
+        <div class="mellomrom">&nbsp;</div>
+        <h3>Fadder-quizkveld</h3>
+        <p>UiA fadderne holder quizkveld på Tollbua 10. september.</p>
+
+        <img class="sentrering" src="./media/handicap_og_deltakere2.jpg" />
+        <p id="feilmelding"></p>
+        <a href=""><div class="knappliten">
+            Trykk for å delta
+        </div></a>
+        <a onclick="feilmelding()" href="#"><div class="knappliten">
+            Mer info
+        </div></a>
+
+    </div>
+    <div class="bunn"></div>
+</div>
+<script>
+    function feilmelding() {
+        document.getElementById("feilmelding").innerHTML = "Feil: Ingen informasjon er lagt ut enda.";
+    }
+</script>
+</body>
+</html>

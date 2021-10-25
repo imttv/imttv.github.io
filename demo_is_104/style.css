@@ -43,8 +43,9 @@ form input {
     margin: 0;
     padding: 5px;
     min-height: 540px;
+    max-height: 540px;
     color: #000;
-    overflow: hidden;
+    overflow: auto;
 }
 .innhold h1 {
     text-align: center;
