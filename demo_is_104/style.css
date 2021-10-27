@@ -49,22 +49,28 @@ form input {
 }
 .innhold h1 {
     text-align: center;
-    font-size: 40px;
+    font-size: 56px;
     color: #d55051;
     padding-bottom: 10px;
     margin: 10px 0 10px 0;
 }
 .innhold h2 {
     text-align: center;
-    font-size: 30px;
+    font-size: 40px;
     color: #d55051;
     padding-bottom: 2px;
+    margin: 10px 0 10px 0;
 }
 .innhold h3 {
-    font-size: 25px;
+    font-size: 30px;
     text-align: center;
     color: #d55051;
     padding-bottom: 10px;
+}
+.innhold h4 {
+    font-size: 25px;
+    text-align: center;
+    color: #d55051;
 }
 .innhold p {
     text-align: center;
@@ -174,19 +180,23 @@ form input {
 .hovedlogo {
     margin-left: auto;
     margin-right: auto;
-    display: flex;
     animation-name: utvidlogo;
-    animation-duration: 1.2s;
+    animation-duration: 2.5s;
     animation-timing-function: ease;
     height: 100px;
+    position: relative;
+    left: 90px;
 }
 @keyframes utvidlogo {
-    from{
-        width: 30px;
+    0% {
+        left: 50px;
         opacity: 0;
     }
-    to{
-        width: 150px;
+    25% {}
+    50% {}
+    75% {}
+    100% {
+        left:90px;
         opacity: 1;
     }
 }
